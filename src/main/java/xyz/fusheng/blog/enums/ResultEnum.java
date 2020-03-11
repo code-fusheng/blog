@@ -1,5 +1,5 @@
 /**
- * FileName: ResultEnum
+ * @FileName: ResultEnum
  * @Author:   fusheng
  * @Date:     2020/3/10 22:04
  * Description: 返回结果枚举

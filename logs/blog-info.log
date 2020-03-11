@@ -1,0 +1,95 @@
+2020-03-11 14:41:12.653 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarting:55 -Starting BlogApplication on DESKTOP-UFFICG8 with PID 19320 (started by 25610 in G:\Code_fusheng\SpringBoot+Vue【个人博客】\blog)
+2020-03-11 14:41:12.664 INFO  [main]xyz.fusheng.blog.BlogApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2020-03-11 14:41:20.564 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:92 -Tomcat initialized with port(s): 8080 (http)
+2020-03-11 14:41:20.578 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-11 14:41:20.580 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-11 14:41:20.582 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-11 14:41:20.840 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-11 14:41:20.842 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 7611 ms
+2020-03-11 14:41:21.604 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
+2020-03-11 14:41:21.934 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Stopping service [Tomcat]
+2020-03-11 14:41:21.969 INFO  [main]o.s.b.a.logging.ConditionEvaluationReportLoggingListener.logMessage:136 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-11 14:43:28.191 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarting:55 -Starting BlogApplication on DESKTOP-UFFICG8 with PID 12128 (started by 25610 in G:\Code_fusheng\SpringBoot+Vue【个人博客】\blog)
+2020-03-11 14:43:28.196 INFO  [main]xyz.fusheng.blog.BlogApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2020-03-11 14:43:30.542 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:92 -Tomcat initialized with port(s): 8080 (http)
+2020-03-11 14:43:30.562 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-11 14:43:30.564 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-11 14:43:30.566 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-11 14:43:30.723 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-11 14:43:30.724 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 2429 ms
+2020-03-11 14:43:31.489 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
+2020-03-11 14:43:31.864 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Stopping service [Tomcat]
+2020-03-11 14:43:31.886 INFO  [main]o.s.b.a.logging.ConditionEvaluationReportLoggingListener.logMessage:136 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-11 14:48:21.040 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarting:55 -Starting BlogApplication on DESKTOP-UFFICG8 with PID 12180 (started by 25610 in G:\Code_fusheng\SpringBoot+Vue【个人博客】\blog)
+2020-03-11 14:48:21.048 INFO  [main]xyz.fusheng.blog.BlogApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2020-03-11 14:48:24.465 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:92 -Tomcat initialized with port(s): 8001 (http)
+2020-03-11 14:48:24.482 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8001"]
+2020-03-11 14:48:24.483 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-11 14:48:24.484 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-11 14:48:24.655 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-11 14:48:24.656 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 3405 ms
+2020-03-11 14:48:25.596 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
+2020-03-11 14:48:26.286 INFO  [main]com.alibaba.druid.pool.DruidDataSource.init:930 -{dataSource-1} inited
+2020-03-11 14:48:27.818 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:181 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-11 14:48:28.420 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8001"]
+2020-03-11 14:48:28.480 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:204 -Tomcat started on port(s): 8001 (http) with context path ''
+2020-03-11 14:48:28.486 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarted:61 -Started BlogApplication in 8.86 seconds (JVM running for 11.693)
+2020-03-11 14:51:45.140 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarting:55 -Starting BlogApplication on DESKTOP-UFFICG8 with PID 336 (started by 25610 in G:\Code_fusheng\SpringBoot+Vue【个人博客】\blog)
+2020-03-11 14:51:45.145 INFO  [main]xyz.fusheng.blog.BlogApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2020-03-11 14:51:47.900 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:92 -Tomcat initialized with port(s): 8001 (http)
+2020-03-11 14:51:47.912 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8001"]
+2020-03-11 14:51:47.913 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-11 14:51:47.913 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-11 14:51:48.105 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-11 14:51:48.107 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 2742 ms
+2020-03-11 14:51:48.965 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
+2020-03-11 14:51:49.285 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Stopping service [Tomcat]
+2020-03-11 14:51:49.307 INFO  [main]o.s.b.a.logging.ConditionEvaluationReportLoggingListener.logMessage:136 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-11 14:52:07.245 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarting:55 -Starting BlogApplication on DESKTOP-UFFICG8 with PID 3300 (started by 25610 in G:\Code_fusheng\SpringBoot+Vue【个人博客】\blog)
+2020-03-11 14:52:07.253 INFO  [main]xyz.fusheng.blog.BlogApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2020-03-11 14:52:09.293 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:92 -Tomcat initialized with port(s): 8001 (http)
+2020-03-11 14:52:09.326 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8001"]
+2020-03-11 14:52:09.329 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-11 14:52:09.362 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-11 14:52:09.602 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-11 14:52:09.603 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 2201 ms
+2020-03-11 14:52:10.943 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
+2020-03-11 14:52:12.989 INFO  [main]com.alibaba.druid.pool.DruidDataSource.init:930 -{dataSource-1} inited
+2020-03-11 14:52:12.998 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Stopping service [Tomcat]
+2020-03-11 14:52:13.015 INFO  [main]o.s.b.a.logging.ConditionEvaluationReportLoggingListener.logMessage:136 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-11 14:52:51.793 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarting:55 -Starting BlogApplication on DESKTOP-UFFICG8 with PID 14880 (started by 25610 in G:\Code_fusheng\SpringBoot+Vue【个人博客】\blog)
+2020-03-11 14:52:51.799 INFO  [main]xyz.fusheng.blog.BlogApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2020-03-11 14:52:54.020 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:92 -Tomcat initialized with port(s): 8001 (http)
+2020-03-11 14:52:54.029 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8001"]
+2020-03-11 14:52:54.030 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-11 14:52:54.031 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-11 14:52:54.137 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-11 14:52:54.138 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 2151 ms
+2020-03-11 14:52:54.946 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
+2020-03-11 14:52:58.871 INFO  [main]com.alibaba.druid.pool.DruidDataSource.init:930 -{dataSource-1} inited
+2020-03-11 14:52:59.567 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:181 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-11 14:52:59.933 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8001"]
+2020-03-11 14:52:59.957 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:204 -Tomcat started on port(s): 8001 (http) with context path ''
+2020-03-11 14:52:59.960 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarted:61 -Started BlogApplication in 9.369 seconds (JVM running for 11.098)
+2020-03-11 14:53:19.227 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarting:55 -Starting BlogApplication on DESKTOP-UFFICG8 with PID 18036 (started by 25610 in G:\Code_fusheng\SpringBoot+Vue【个人博客】\blog)
+2020-03-11 14:53:19.233 INFO  [main]xyz.fusheng.blog.BlogApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2020-03-11 14:53:21.225 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:92 -Tomcat initialized with port(s): 8001 (http)
+2020-03-11 14:53:21.245 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8001"]
+2020-03-11 14:53:21.250 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-11 14:53:21.251 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-11 14:53:21.432 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-11 14:53:21.436 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 2130 ms
+2020-03-11 14:53:22.297 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
+2020-03-11 14:53:26.207 INFO  [main]com.alibaba.druid.pool.DruidDataSource.init:930 -{dataSource-1} inited
+2020-03-11 14:53:27.044 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:181 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-11 14:53:27.820 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8001"]
+2020-03-11 14:53:27.850 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:204 -Tomcat started on port(s): 8001 (http) with context path ''
+2020-03-11 14:53:27.854 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarted:61 -Started BlogApplication in 9.694 seconds (JVM running for 11.409)

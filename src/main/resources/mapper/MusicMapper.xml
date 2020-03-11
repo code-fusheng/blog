@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.fusheng.blog.mapper.MusicMapper">
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="xyz.fusheng.blog.pojo.Music">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="artist" property="artist"/>
+        <result column="url" property="url"/>
+        <result column="cover" property="cover"/>
+        <result column="lrc" property="lrc"/>
+        <result column="created_time" property="createdTime"/>
+        <result column="enabled" property="enabled"/>
+        <result column="deleted" property="deleted"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, artist, url, cover,
+        lrc, created_time, enabled, deleted
+    </sql>
+</mapper>

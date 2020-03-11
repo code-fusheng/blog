@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.fusheng.blog.mapper.BlogMapper">
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="xyz.fusheng.blog.pojo.Blog">
+        <id column="blog_id" property="blogId"/>
+        <result column="blog_title" property="blogTitle"/>
+        <result column="blog_image" property="blogImage"/>
+        <result column="blog_content" property="blogContent"/>
+        <result column="blog_goods" property="blogGoods"/>
+        <result column="blog_read" property="blogRead"/>
+        <result column="blog_collection" property="blogCollection"/>
+        <result column="blog_type" property="blogType"/>
+        <result column="blog_remark" property="blogRemark"/>
+        <result column="blog_comment" property="blogComment"/>
+        <result column="blog_source" property="blogSource"/>
+        <result column="created_time" property="createdTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="version" property="version"/>
+        <result column="deleted" property="deleted"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        blog_id, blog_title,blog_image, blog_content, blog_goods,
+        blog_read, blog_collection, blog_type, blog_remark, blog_comment,
+        blog_source, created_time, update_time, version, deleted
+    </sql>
+</mapper>

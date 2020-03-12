@@ -6,5 +6,13 @@
  */
 package xyz.fusheng.blog.service;
 
+import xyz.fusheng.blog.pojo.Admin;
+
 public interface AdminService {
+    /**
+     * 根据用户名查询
+     * @param username
+     * @return
+     */
+    Admin getByUsername(String username);
 }

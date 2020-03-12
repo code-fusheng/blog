@@ -16,4 +16,10 @@
     <sql id="Base_Column_List">
         id, name, header, signature, comment, username, password
     </sql>
+    <select id="getByUsername" resultMap="BaseResultMap">
+        select
+        name, header, signature, username, password
+        from bl_admin
+        where username = #{value}
+    </select>
 </mapper>

@@ -6,5 +6,14 @@
  */
 package xyz.fusheng.blog.service;
 
+import xyz.fusheng.blog.pojo.Log;
+
 public interface LogService {
+
+    /**
+     * 保存
+     * @param logger
+     */
+    void save(Log logger);
+
 }

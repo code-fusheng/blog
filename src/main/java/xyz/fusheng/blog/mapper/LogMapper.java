@@ -7,7 +7,14 @@
 package xyz.fusheng.blog.mapper;
 
 import org.springframework.stereotype.Component;
+import xyz.fusheng.blog.pojo.Log;
 
 @Component
 public interface LogMapper {
+
+    /**
+     * 保存
+     * @param logger
+     */
+    void save(Log logger);
 }

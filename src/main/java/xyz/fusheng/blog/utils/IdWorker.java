@@ -2,7 +2,7 @@
  * @FileName: IdWorker
  * @Author: fusheng
  * @Date: 2020/3/11 11:56
- * Description: 分布式自增长ID
+ * @Description: 分布式自增长ID
  */
 package xyz.fusheng.blog.utils;
 

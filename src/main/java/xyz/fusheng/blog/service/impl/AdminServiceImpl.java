@@ -6,9 +6,25 @@
  */
 package xyz.fusheng.blog.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import xyz.fusheng.blog.mapper.AdminMapper;
+import xyz.fusheng.blog.pojo.Admin;
 import xyz.fusheng.blog.service.AdminService;
 
 @Service
 public class AdminServiceImpl implements AdminService {
+
+    @Autowired
+    private AdminMapper adminMapper;
+
+    /**
+     * 根据用户名查询
+     * @param username
+     * @return
+     */
+    @Override
+    public Admin getByUsername(String username) {
+        return adminMapper.getByUsername(username);
+    }
 }

@@ -14,4 +14,64 @@
     <sql id="Base_Column_List">
         type_id, type_name, type_blog_count, enable, deleted
     </sql>
+    <!-- 根据名称查询 -->
+    <select id="getByName" resultMap="BaseResultMap">
+        select
+        type_id, type_name, type_blog_count
+        from bl_type
+        where deleted = 0
+        and type_name = #{value}
+    </select>
+    <!-- 插入 -->
+    <insert id="insert" parameterType="xyz.fusheng.blog.pojo.Type">
+        insert into bl_type(type_name) values (
+            #{typeName}
+        )
+    </insert>
+    <!-- 后台查询所有 -->
+    <select id="getAll" resultMap="BaseResultMap">
+        select
+        type_id, type_name, type_blog_count, enable
+        from bl_type
+        where deleted = 0
+    </select>
+    <!--前台查询所有 -->
+    <select id="getTypeList" resultMap="BaseResultMap">
+        select
+        type_id, type_name, type_blog_count
+        from bl_type
+        where deleted = 0
+        and enable = 1
+    </select>
+    <!-- 根据id更新 -->
+    <update id="update" parameterType="xyz.fusheng.blog.pojo.Type">
+        update bl_type
+        <set>
+            <if test="typeName!=null and typeName!=''">
+                type_name = #{typeName},
+            </if>
+            <if test="typeBlogCount!=null and typeBlogCount!=''">
+                type_blog_count = #{typeBlogCount},
+            </if>
+            <if test="enable!=null">
+                enable = #{enable},
+            </if>
+        </set>
+        where type_id = #{typeId}
+    </update>
+    <!-- 根据id查询 -->
+    <select id="getById" resultMap="BaseResultMap">
+        select
+        type_id, type_name, type_blog_count, enable
+        from bl_type
+        where type_id = #{value}
+        and deleted = 0
+    </select>
+    <!-- 根据id删除 逻辑删除此处不用delete,用update -->
+    <update id="deleteById">
+        update bl_type set
+        delete = 1
+        where id = #{vaule}
+    </update>
+
 </mapper>

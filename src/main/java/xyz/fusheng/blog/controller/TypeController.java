@@ -53,6 +53,17 @@ public class TypeController {
     }
 
     /**
+     * 根据id查询
+     * @param id
+     * @return
+     */
+    @GetMapping("/get/{id}")
+    public Result<Type> getById(@PathVariable("id") Integer id){
+        Type type = typeService.getById(id);
+        return new Result<>(type);
+    }
+
+    /**
      * 根据id更新
      * @param type
      * @return

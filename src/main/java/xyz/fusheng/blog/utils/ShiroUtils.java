@@ -24,18 +24,13 @@ public class ShiroUtils {
     /**
      * 获取登录中的用户
      * @return
-     *
      */
     public static Admin getLoginUser() {
-        try {
-            Session session = SecurityUtils.getSubject().getSession();
-            SimplePrincipalCollection principalCollection = (SimplePrincipalCollection) session.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY);
-            if (principalCollection == null) {
-                return null;
-            }
-            return (Admin) principalCollection.getPrimaryPrincipal();
-        }catch (Exception e){
-            throw new BlogException(ResultEnum.NOT_LOGIN);
+        Session session = SecurityUtils.getSubject().getSession();
+        SimplePrincipalCollection principalCollection = (SimplePrincipalCollection) session.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY);
+        if (principalCollection == null) {
+            return null;
         }
+        return (Admin) principalCollection.getPrimaryPrincipal();
     }
 }

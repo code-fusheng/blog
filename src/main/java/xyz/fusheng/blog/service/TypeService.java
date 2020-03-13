@@ -53,4 +53,11 @@ public interface TypeService {
      * @param id
      */
     void deleteById(Integer id);
+
+    /**
+     * 根据id查询
+     * @param id
+     * @return
+     */
+    Type getById(Integer id);
 }

@@ -71,7 +71,7 @@
     <update id="deleteById">
         update bl_type set
         delete = 1
-        where id = #{vaule}
+        where type_id = #{vaule}
     </update>
 
 </mapper>

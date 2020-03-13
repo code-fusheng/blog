@@ -54,7 +54,7 @@ public class TypeServiceImpl implements TypeService {
     @Override
     public void enableById(Integer id) {
         // 先查再启用
-        Type t = typeMapper.getById();
+        Type t = typeMapper.getById(id);
         t.setEnable(StateEnums.ENABLED.getCode());
         typeMapper.update(t);
     }
@@ -62,7 +62,7 @@ public class TypeServiceImpl implements TypeService {
     @Override
     public void disableById(Integer id) {
         // 先查再弃用 保证数据完整性
-        Type t = typeMapper.getById();
+        Type t = typeMapper.getById(id);
         t.setEnable(StateEnums.NOT_ENABLE.getCode());
         typeMapper.update(t);
     }
@@ -70,6 +70,11 @@ public class TypeServiceImpl implements TypeService {
     @Override
     public void deleteById(Integer id) {
         typeMapper.deleteById(id);
+    }
+
+    @Override
+    public Type getById(Integer id) {
+        return typeMapper.getById(id);
     }
 
 

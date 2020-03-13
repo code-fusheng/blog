@@ -56,4 +56,11 @@ public interface TypeMapper {
      * @param id
      */
     void deleteById(Integer id);
+
+    /**
+     * 根据id查
+     * @param id
+     * @return
+     */
+    Type getById(Integer id);
 }

@@ -70,8 +70,8 @@
     <!-- 根据id删除 逻辑删除此处不用delete,用update -->
     <update id="deleteById">
         update bl_type set
-        delete = 1
-        where type_id = #{vaule}
+        deleted = 1
+        where type_id = #{value}
     </update>
 
 </mapper>

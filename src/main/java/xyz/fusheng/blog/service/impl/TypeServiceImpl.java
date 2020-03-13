@@ -76,6 +76,4 @@ public class TypeServiceImpl implements TypeService {
     public Type getById(Integer id) {
         return typeMapper.getById(id);
     }
-
-
 }

@@ -9,5 +9,5 @@ package xyz.fusheng.blog.mapper;
 import org.springframework.stereotype.Component;
 
 @Component
-public interface BlogGoods {
+public interface BlogGoodsMapper {
 }

@@ -1,9 +1,9 @@
 package xyz.fusheng.blog;
 
-import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
+        import org.mybatis.spring.annotation.MapperScan;
+        import org.springframework.boot.SpringApplication;
+        import org.springframework.boot.autoconfigure.SpringBootApplication;
+        import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * 启动类
@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @Date: 2020/3/12 10:34  --  2020/3/13 0:20  完成了帖子分类
  * @Date: 2020/3/13 7:34   --  2020/3/13 15:44 完成了友情链接
  * @Date: 2020/3/13 16:04  --  2020/3/13 17:13 完成了管理功能
- * @Data: 2020/3/13 19:01  --  2020/3/13
+ * @Data: 2020/3/13 19:01  --  2020/3/13 23:49 完成了博客功能
  * @
  */
 @SpringBootApplication

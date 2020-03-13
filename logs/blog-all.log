@@ -3288,3 +3288,604 @@ Caused by: org.apache.shiro.UnavailableSecurityManagerException: No SecurityMana
 2020-03-13 16:36:17.682 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[]
 2020-03-13 16:36:17.765 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 87
 2020-03-13 16:36:17.767 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"data":{"id":1,"name":"张浩","signature":"浮生若梦,为欢几何","username":"admin"},"msg":"操作成功！"}
+2020-03-13 16:40:31.400 WARN  [http-nio-8001-exec-8]o.s.w.s.mvc.support.DefaultHandlerExceptionResolver.logException:199 -Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
+2020-03-13 16:40:31.464 ERROR [http-nio-8001-exec-8]o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet].log:175 -Servlet.service() for servlet [dispatcherServlet] threw exception
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:627)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at xyz.fusheng.blog.utils.ShiroUtils.getLoginUser(ShiroUtils.java:29)
+	at xyz.fusheng.blog.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:30)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:141)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-03-13 16:40:31.466 ERROR [http-nio-8001-exec-8]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].log:175 -Exception Processing ErrorPage[errorCode=0, location=/error]
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:627)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at xyz.fusheng.blog.utils.ShiroUtils.getLoginUser(ShiroUtils.java:29)
+	at xyz.fusheng.blog.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:30)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:141)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	... 25 common frames omitted
+2020-03-13 16:40:50.436 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /admin/updateInfo
+2020-03-13 16:40:50.437 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : PUT
+2020-03-13 16:40:50.438 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 16:40:50.439 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.AdminController.updateInfo
+2020-03-13 16:40:50.440 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Admin(id=1, name=null, header=null, signature=浮生若梦,为欢几何!, comment=null, username=null, password=null)]
+2020-03-13 16:40:52.599 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 2163
+2020-03-13 16:40:52.600 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"msg":"更新成功!"}
+2020-03-13 16:43:02.304 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /admin/updatePassword
+2020-03-13 16:43:02.304 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : PUT
+2020-03-13 16:43:02.305 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 16:43:02.306 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.AdminController.updatePassword
+2020-03-13 16:43:02.307 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Admin(id=1, name=null, header=null, signature=null, comment=null, username=null, password=21232f297a57a5a743894a0e4a801fc3)]
+2020-03-13 16:43:02.504 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 200
+2020-03-13 16:43:02.505 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"msg":"更新成功!"}
+2020-03-13 16:43:57.410 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /admin/updatePassword
+2020-03-13 16:43:57.411 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : PUT
+2020-03-13 16:43:57.412 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 16:43:57.413 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.AdminController.updatePassword
+2020-03-13 16:43:57.413 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Admin(id=1, name=null, header=null, signature=null, comment=null, username=null, password=e10adc3949ba59abbe56e057f20f883e)]
+2020-03-13 16:43:57.618 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 208
+2020-03-13 16:43:57.620 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"msg":"更新成功!"}
+2020-03-13 22:52:47.683 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarting:55 -Starting BlogApplication on DESKTOP-UFFICG8 with PID 18792 (started by 25610 in G:\Code_fusheng\SpringBoot+Vue【个人博客】\blog)
+2020-03-13 22:52:47.900 INFO  [main]xyz.fusheng.blog.BlogApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2020-03-13 22:52:54.646 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'shiroConfig' of type [xyz.fusheng.blog.config.ShiroConfig$$EnhancerBySpringCGLIB$$ba1a7970] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:52:54.822 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:52:54.839 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$dc9bb5b1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:52:54.847 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure$$EnhancerBySpringCGLIB$$c37359f3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:52:54.855 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
+2020-03-13 22:52:55.047 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:52:55.091 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:52:55.126 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'statFilter' of type [com.alibaba.druid.filter.stat.StatFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:53:00.473 INFO  [main]com.alibaba.druid.pool.DruidDataSource.init:930 -{dataSource-1} inited
+2020-03-13 22:53:00.474 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'dataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:53:00.867 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:53:01.973 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:53:01.985 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:53:02.003 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:53:02.010 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminMapper' of type [com.sun.proxy.$Proxy80] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:53:02.015 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminServiceImpl' of type [xyz.fusheng.blog.service.impl.AdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:53:02.019 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminRealm' of type [xyz.fusheng.blog.realm.AdminRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:53:02.099 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:53:02.157 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:53:02.914 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:92 -Tomcat initialized with port(s): 8001 (http)
+2020-03-13 22:53:02.927 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8001"]
+2020-03-13 22:53:02.928 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-13 22:53:02.929 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-13 22:53:03.074 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-13 22:53:03.075 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 14960 ms
+2020-03-13 22:53:05.211 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8001"]
+2020-03-13 22:53:05.251 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:204 -Tomcat started on port(s): 8001 (http) with context path ''
+2020-03-13 22:53:05.256 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarted:61 -Started BlogApplication in 20.178 seconds (JVM running for 23.946)
+2020-03-13 22:54:11.555 INFO  [http-nio-8001-exec-2]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 22:54:11.555 INFO  [http-nio-8001-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
+2020-03-13 22:54:11.573 INFO  [http-nio-8001-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 17 ms
+2020-03-13 22:54:11.771 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /admin/login
+2020-03-13 22:54:11.782 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 22:54:11.783 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 22:54:11.786 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.AdminController.login
+2020-03-13 22:54:11.786 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Admin(id=null, name=null, header=null, signature=null, comment=null, username=admin, password=e10adc3949ba59abbe56e057f20f883e)]
+2020-03-13 22:54:12.086 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 316
+2020-03-13 22:54:12.249 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"data":{"token":"7FB03BAC1FEBEF62E8EDBF504038ED7B"},"msg":"操作成功！"}
+2020-03-13 22:56:49.993 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/save
+2020-03-13 22:56:49.994 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 22:56:49.996 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 22:56:49.997 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.save
+2020-03-13 22:56:49.998 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Blog(blogId=null, blogTitle=测试博客1, blogImage=null, blogContent=测试内容, blogGoods=null, blogRead=null, blogCollection=null, blogType=6, blogRemark=null, blogComment=null, blogSource=null, createdTime=null, updateTime=null, version=null, deleted=null)]
+2020-03-13 22:56:50.510 ERROR [http-nio-8001-exec-5]o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet].log:175 -Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' cannot be null
+### The error may involve xyz.fusheng.blog.mapper.BlogMapper.save-Inline
+### The error occurred while setting parameters
+### SQL: insert into bl_blog(             blog_id, blog_title,blog_image, blog_content, blog_type, blog_remark, blog_source         ) values (             ?, ?, ?, ?, ?, ?, ?         )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' cannot be null
+; Column 'blog_id' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' cannot be null] with root cause
+java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' cannot be null
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3409)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy79.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy92.save(Unknown Source)
+	at xyz.fusheng.blog.service.impl.BlogServiceImpl.save(BlogServiceImpl.java:38)
+	at xyz.fusheng.blog.service.impl.BlogServiceImpl$$FastClassBySpringCGLIB$$4f70dde1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685)
+	at xyz.fusheng.blog.service.impl.BlogServiceImpl$$EnhancerBySpringCGLIB$$8b6ceecc.save(<generated>)
+	at xyz.fusheng.blog.service.impl.BlogServiceImpl$$FastClassBySpringCGLIB$$4f70dde1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685)
+	at xyz.fusheng.blog.service.impl.BlogServiceImpl$$EnhancerBySpringCGLIB$$86b7ed20.save(<generated>)
+	at xyz.fusheng.blog.controller.BlogController.save(BlogController.java:38)
+	at xyz.fusheng.blog.controller.BlogController$$FastClassBySpringCGLIB$$a7ebadad.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at xyz.fusheng.blog.aspect.RequestAspect.doAround(RequestAspect.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:62)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at xyz.fusheng.blog.controller.BlogController$$EnhancerBySpringCGLIB$$c72b172.save(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-03-13 22:56:50.541 ERROR [http-nio-8001-exec-5]o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet].log:175 -Servlet.service() for servlet [dispatcherServlet] threw exception
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:627)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at xyz.fusheng.blog.utils.ShiroUtils.getLoginUser(ShiroUtils.java:29)
+	at xyz.fusheng.blog.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:30)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:141)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-03-13 22:56:50.543 ERROR [http-nio-8001-exec-5]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].log:175 -Exception Processing ErrorPage[errorCode=0, location=/error]
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:627)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at xyz.fusheng.blog.utils.ShiroUtils.getLoginUser(ShiroUtils.java:29)
+	at xyz.fusheng.blog.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:30)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:141)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	... 26 common frames omitted
+2020-03-13 22:59:19.795 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarting:55 -Starting BlogApplication on DESKTOP-UFFICG8 with PID 20912 (started by 25610 in G:\Code_fusheng\SpringBoot+Vue【个人博客】\blog)
+2020-03-13 22:59:19.801 INFO  [main]xyz.fusheng.blog.BlogApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2020-03-13 22:59:22.852 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'shiroConfig' of type [xyz.fusheng.blog.config.ShiroConfig$$EnhancerBySpringCGLIB$$e48cae68] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:59:22.934 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:59:22.958 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$70deaa9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:59:22.965 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure$$EnhancerBySpringCGLIB$$ede58eeb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:59:22.969 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
+2020-03-13 22:59:23.062 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:59:23.090 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:59:23.132 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'statFilter' of type [com.alibaba.druid.filter.stat.StatFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:59:27.272 INFO  [main]com.alibaba.druid.pool.DruidDataSource.init:930 -{dataSource-1} inited
+2020-03-13 22:59:27.273 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'dataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:59:27.377 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:59:27.953 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:59:27.975 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:59:27.996 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:59:28.008 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminMapper' of type [com.sun.proxy.$Proxy80] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:59:28.012 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminServiceImpl' of type [xyz.fusheng.blog.service.impl.AdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:59:28.015 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminRealm' of type [xyz.fusheng.blog.realm.AdminRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:59:28.105 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:59:28.179 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 22:59:28.641 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:92 -Tomcat initialized with port(s): 8001 (http)
+2020-03-13 22:59:28.653 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8001"]
+2020-03-13 22:59:28.654 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-13 22:59:28.655 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-13 22:59:28.814 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-13 22:59:28.815 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 8895 ms
+2020-03-13 22:59:30.608 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8001"]
+2020-03-13 22:59:30.636 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:204 -Tomcat started on port(s): 8001 (http) with context path ''
+2020-03-13 22:59:30.639 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarted:61 -Started BlogApplication in 12.033 seconds (JVM running for 14.409)
+2020-03-13 22:59:42.685 INFO  [http-nio-8001-exec-2]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 22:59:42.687 INFO  [http-nio-8001-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
+2020-03-13 22:59:42.712 INFO  [http-nio-8001-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 24 ms
+2020-03-13 22:59:42.867 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /admin/login
+2020-03-13 22:59:42.869 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 22:59:42.871 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 22:59:42.875 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.AdminController.login
+2020-03-13 22:59:42.875 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Admin(id=null, name=null, header=null, signature=null, comment=null, username=admin, password=e10adc3949ba59abbe56e057f20f883e)]
+2020-03-13 22:59:43.106 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 240
+2020-03-13 22:59:43.245 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"data":{"token":"B68D8747C40B415330B511066B501EBA"},"msg":"操作成功！"}
+2020-03-13 22:59:57.397 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/save
+2020-03-13 22:59:57.398 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 22:59:57.399 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 22:59:57.400 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.save
+2020-03-13 22:59:57.401 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Blog(blogId=null, blogTitle=测试博客1, blogImage=null, blogContent=测试内容, blogGoods=null, blogRead=null, blogCollection=null, blogType=6, blogRemark=null, blogComment=null, blogSource=null, createdTime=null, updateTime=null, version=null, deleted=null)]
+2020-03-13 22:59:57.531 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 134
+2020-03-13 22:59:57.532 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"msg":"添加成功!"}
+2020-03-13 23:01:01.914 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/save
+2020-03-13 23:01:01.915 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 23:01:01.915 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:01:01.916 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.save
+2020-03-13 23:01:01.916 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Blog(blogId=null, blogTitle=测试博客2, blogImage=null, blogContent=测试内容, blogGoods=null, blogRead=null, blogCollection=null, blogType=7, blogRemark=null, blogComment=null, blogSource=null, createdTime=null, updateTime=null, version=null, deleted=null)]
+2020-03-13 23:01:02.031 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 117
+2020-03-13 23:01:02.032 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"msg":"添加成功!"}
+2020-03-13 23:01:13.877 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/save
+2020-03-13 23:01:13.878 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 23:01:13.879 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:01:13.879 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.save
+2020-03-13 23:01:13.879 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Blog(blogId=null, blogTitle=测试博客3, blogImage=null, blogContent=测试内容, blogGoods=null, blogRead=null, blogCollection=null, blogType=7, blogRemark=null, blogComment=null, blogSource=null, createdTime=null, updateTime=null, version=null, deleted=null)]
+2020-03-13 23:01:13.992 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 115
+2020-03-13 23:01:13.993 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"msg":"添加成功!"}
+2020-03-13 23:01:21.230 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/save
+2020-03-13 23:01:21.231 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 23:01:21.231 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:01:21.232 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.save
+2020-03-13 23:01:21.243 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Blog(blogId=null, blogTitle=测试博客4, blogImage=null, blogContent=测试内容, blogGoods=null, blogRead=null, blogCollection=null, blogType=8, blogRemark=null, blogComment=null, blogSource=null, createdTime=null, updateTime=null, version=null, deleted=null)]
+2020-03-13 23:01:21.357 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 127
+2020-03-13 23:01:21.358 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"msg":"添加成功!"}
+2020-03-13 23:03:47.827 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/getByPage
+2020-03-13 23:03:47.827 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 23:03:47.828 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:03:47.828 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.getByPage
+2020-03-13 23:03:47.828 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Page(currentPage=1, pageSize=2, totalPage=0, totalCount=0, index=0, list=null, params={}, sortColumn=null, sortMethod=asc)]
+2020-03-13 23:03:48.168 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 342
+2020-03-13 23:03:48.184 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"data":{"index":0,"list":[{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1238479919940927488","blogRead":0,"blogTitle":"测试博客1","createdTime":"2020-03-13 22:59:57","typeName":"Spring Boot","updateTime":"2020-03-13 22:59:57"},{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1238480271545237504","blogRead":0,"blogTitle":"测试博客4","createdTime":"2020-03-13 23:01:21","typeName":"Spring 全家桶","updateTime":"2020-03-13 23:01:21"}],"pageSize":2,"params":{},"sortMethod":"asc","totalCount":2,"totalPage":1},"msg":"操作成功！"}
+2020-03-13 23:06:25.745 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/getByPage
+2020-03-13 23:06:25.747 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 23:06:25.748 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:06:25.749 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.getByPage
+2020-03-13 23:06:25.749 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Page(currentPage=1, pageSize=2, totalPage=0, totalCount=0, index=0, list=null, params={}, sortColumn=created_time, sortMethod=desc)]
+2020-03-13 23:06:25.752 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 7
+2020-03-13 23:06:25.753 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":40005,"msg":"排序参数不合法"}
+2020-03-13 23:06:54.859 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/getByPage
+2020-03-13 23:06:54.860 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 23:06:54.861 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:06:54.862 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.getByPage
+2020-03-13 23:06:54.874 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Page(currentPage=1, pageSize=2, totalPage=0, totalCount=0, index=0, list=null, params={}, sortColumn=created_time, sortMethod=desc)]
+2020-03-13 23:06:54.875 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 16
+2020-03-13 23:06:54.875 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":40005,"msg":"排序参数不合法"}
+2020-03-13 23:07:20.683 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/getByPage
+2020-03-13 23:07:20.684 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 23:07:20.685 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:07:20.685 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.getByPage
+2020-03-13 23:07:20.686 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Page(currentPage=1, pageSize=2, totalPage=0, totalCount=0, index=0, list=null, params={}, sortColumn=created_time, sortMethod=esc)]
+2020-03-13 23:07:20.686 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 3
+2020-03-13 23:07:20.687 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":40005,"msg":"排序参数不合法"}
+2020-03-13 23:08:37.647 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/getByPage
+2020-03-13 23:08:37.648 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 23:08:37.649 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:08:37.649 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.getByPage
+2020-03-13 23:08:37.650 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Page(currentPage=1, pageSize=2, totalPage=0, totalCount=0, index=0, list=null, params={}, sortColumn=created_time, sortMethod=desc)]
+2020-03-13 23:08:37.650 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 3
+2020-03-13 23:08:37.651 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":40005,"msg":"排序参数不合法"}
+2020-03-13 23:10:54.282 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarting:55 -Starting BlogApplication on DESKTOP-UFFICG8 with PID 14092 (started by 25610 in G:\Code_fusheng\SpringBoot+Vue【个人博客】\blog)
+2020-03-13 23:10:54.291 INFO  [main]xyz.fusheng.blog.BlogApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2020-03-13 23:10:55.735 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'shiroConfig' of type [xyz.fusheng.blog.config.ShiroConfig$$EnhancerBySpringCGLIB$$56ba8dfe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 23:10:55.791 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 23:10:55.812 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$793bca3f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 23:10:55.820 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure$$EnhancerBySpringCGLIB$$60136e81] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 23:10:55.827 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
+2020-03-13 23:10:55.905 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 23:10:55.936 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 23:10:55.968 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'statFilter' of type [com.alibaba.druid.filter.stat.StatFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 23:11:00.154 INFO  [main]com.alibaba.druid.pool.DruidDataSource.init:930 -{dataSource-1} inited
+2020-03-13 23:11:00.155 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'dataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 23:11:00.253 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 23:11:00.634 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 23:11:00.642 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 23:11:00.652 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 23:11:00.655 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminMapper' of type [com.sun.proxy.$Proxy80] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 23:11:00.658 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminServiceImpl' of type [xyz.fusheng.blog.service.impl.AdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 23:11:00.660 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminRealm' of type [xyz.fusheng.blog.realm.AdminRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 23:11:00.701 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 23:11:00.733 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 23:11:01.059 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:92 -Tomcat initialized with port(s): 8001 (http)
+2020-03-13 23:11:01.070 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8001"]
+2020-03-13 23:11:01.071 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-13 23:11:01.071 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-13 23:11:01.188 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-13 23:11:01.189 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 6780 ms
+2020-03-13 23:11:03.064 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8001"]
+2020-03-13 23:11:03.095 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:204 -Tomcat started on port(s): 8001 (http) with context path ''
+2020-03-13 23:11:03.099 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarted:61 -Started BlogApplication in 10.097 seconds (JVM running for 12.189)
+2020-03-13 23:11:12.070 INFO  [http-nio-8001-exec-2]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 23:11:12.071 INFO  [http-nio-8001-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
+2020-03-13 23:11:12.089 INFO  [http-nio-8001-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 18 ms
+2020-03-13 23:11:12.299 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /admin/login
+2020-03-13 23:11:12.302 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 23:11:12.303 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:11:12.306 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.AdminController.login
+2020-03-13 23:11:12.307 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Admin(id=null, name=null, header=null, signature=null, comment=null, username=admin, password=e10adc3949ba59abbe56e057f20f883e)]
+2020-03-13 23:11:12.495 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 196
+2020-03-13 23:11:12.610 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"data":{"token":"9FF0A9A4EC82206B87833BCCCB065799"},"msg":"操作成功！"}
+2020-03-13 23:11:31.296 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/getByPage
+2020-03-13 23:11:31.297 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 23:11:31.298 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:11:31.298 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.getByPage
+2020-03-13 23:11:31.299 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Page(currentPage=1, pageSize=2, totalPage=0, totalCount=0, index=0, list=null, params={}, sortColumn=created_time, sortMethod=desc)]
+2020-03-13 23:11:31.586 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 290
+2020-03-13 23:11:31.601 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"data":{"index":0,"list":[{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1238480271545237504","blogRead":0,"blogTitle":"测试博客4","createdTime":"2020-03-13 23:01:21","typeName":"Spring 全家桶","updateTime":"2020-03-13 23:01:21"},{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1238479919940927488","blogRead":0,"blogTitle":"测试博客1","createdTime":"2020-03-13 22:59:57","typeName":"Spring Boot","updateTime":"2020-03-13 22:59:57"}],"pageSize":2,"params":{},"sortColumn":"created_time","sortMethod":"desc","totalCount":2,"totalPage":1},"msg":"操作成功！"}
+2020-03-13 23:11:52.250 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/getByPage
+2020-03-13 23:11:52.250 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 23:11:52.250 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:11:52.251 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.getByPage
+2020-03-13 23:11:52.252 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Page(currentPage=1, pageSize=4, totalPage=0, totalCount=0, index=0, list=null, params={}, sortColumn=created_time, sortMethod=desc)]
+2020-03-13 23:11:52.477 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 227
+2020-03-13 23:11:52.478 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"data":{"index":0,"list":[{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1238480271545237504","blogRead":0,"blogTitle":"测试博客4","createdTime":"2020-03-13 23:01:21","typeName":"Spring 全家桶","updateTime":"2020-03-13 23:01:21"},{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1238479919940927488","blogRead":0,"blogTitle":"测试博客1","createdTime":"2020-03-13 22:59:57","typeName":"Spring Boot","updateTime":"2020-03-13 22:59:57"}],"pageSize":4,"params":{},"sortColumn":"created_time","sortMethod":"desc","totalCount":2,"totalPage":1},"msg":"操作成功！"}
+2020-03-13 23:12:10.496 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/getByPage
+2020-03-13 23:12:10.496 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 23:12:10.497 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:12:10.497 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.getByPage
+2020-03-13 23:12:10.498 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Page(currentPage=1, pageSize=2, totalPage=0, totalCount=0, index=0, list=null, params={}, sortColumn=created_time, sortMethod=desc)]
+2020-03-13 23:12:10.747 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 252
+2020-03-13 23:12:10.748 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"data":{"index":0,"list":[{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1238480271545237504","blogRead":0,"blogTitle":"测试博客4","createdTime":"2020-03-13 23:01:21","typeName":"Spring 全家桶","updateTime":"2020-03-13 23:01:21"},{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1238479919940927488","blogRead":0,"blogTitle":"测试博客1","createdTime":"2020-03-13 22:59:57","typeName":"Spring Boot","updateTime":"2020-03-13 22:59:57"}],"pageSize":2,"params":{},"sortColumn":"created_time","sortMethod":"desc","totalCount":2,"totalPage":1},"msg":"操作成功！"}
+2020-03-13 23:12:44.385 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/getByPage
+2020-03-13 23:12:44.386 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 23:12:44.387 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:12:44.388 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.getByPage
+2020-03-13 23:12:44.389 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Page(currentPage=1, pageSize=3, totalPage=0, totalCount=0, index=0, list=null, params={}, sortColumn=created_time, sortMethod=desc)]
+2020-03-13 23:12:44.629 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 244
+2020-03-13 23:12:44.630 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"data":{"index":0,"list":[{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1238480271545237504","blogRead":0,"blogTitle":"测试博客4","createdTime":"2020-03-13 23:01:21","typeName":"Spring 全家桶","updateTime":"2020-03-13 23:01:21"},{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1238479919940927488","blogRead":0,"blogTitle":"测试博客1","createdTime":"2020-03-13 22:59:57","typeName":"Spring Boot","updateTime":"2020-03-13 22:59:57"}],"pageSize":3,"params":{},"sortColumn":"created_time","sortMethod":"desc","totalCount":2,"totalPage":1},"msg":"操作成功！"}
+2020-03-13 23:13:09.670 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/save
+2020-03-13 23:13:09.671 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 23:13:09.672 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:13:09.672 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.save
+2020-03-13 23:13:09.673 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Blog(blogId=null, blogTitle=测试博客5, blogImage=null, blogContent=测试内容, blogGoods=null, blogRead=null, blogCollection=null, blogType=8, blogRemark=null, blogComment=null, blogSource=null, createdTime=null, updateTime=null, version=null, deleted=null)]
+2020-03-13 23:13:09.790 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 120
+2020-03-13 23:13:09.791 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"msg":"添加成功!"}
+2020-03-13 23:13:15.048 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/getByPage
+2020-03-13 23:13:15.052 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 23:13:15.055 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:13:15.056 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.getByPage
+2020-03-13 23:13:15.059 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Page(currentPage=1, pageSize=3, totalPage=0, totalCount=0, index=0, list=null, params={}, sortColumn=created_time, sortMethod=desc)]
+2020-03-13 23:13:15.283 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 235
+2020-03-13 23:13:15.283 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"data":{"index":0,"list":[{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1238483242916061184","blogRead":0,"blogTitle":"测试博客5","createdTime":"2020-03-13 23:13:09","typeName":"Spring 全家桶","updateTime":"2020-03-13 23:13:09"},{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1238480271545237504","blogRead":0,"blogTitle":"测试博客4","createdTime":"2020-03-13 23:01:21","typeName":"Spring 全家桶","updateTime":"2020-03-13 23:01:21"},{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1238479919940927488","blogRead":0,"blogTitle":"测试博客1","createdTime":"2020-03-13 22:59:57","typeName":"Spring Boot","updateTime":"2020-03-13 22:59:57"}],"pageSize":3,"params":{},"sortColumn":"created_time","sortMethod":"desc","totalCount":3,"totalPage":1},"msg":"操作成功！"}
+2020-03-13 23:13:55.004 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/getByPage
+2020-03-13 23:13:55.005 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-13 23:13:55.005 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:13:55.006 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.getByPage
+2020-03-13 23:13:55.006 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Page(currentPage=1, pageSize=2, totalPage=0, totalCount=0, index=0, list=null, params={}, sortColumn=created_time, sortMethod=desc)]
+2020-03-13 23:13:55.254 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 250
+2020-03-13 23:13:55.255 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"data":{"index":0,"list":[{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1238483242916061184","blogRead":0,"blogTitle":"测试博客5","createdTime":"2020-03-13 23:13:09","typeName":"Spring 全家桶","updateTime":"2020-03-13 23:13:09"},{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1238480271545237504","blogRead":0,"blogTitle":"测试博客4","createdTime":"2020-03-13 23:01:21","typeName":"Spring 全家桶","updateTime":"2020-03-13 23:01:21"}],"pageSize":2,"params":{},"sortColumn":"created_time","sortMethod":"desc","totalCount":3,"totalPage":2},"msg":"操作成功！"}
+2020-03-13 23:16:47.403 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/update
+2020-03-13 23:16:47.404 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : PUT
+2020-03-13 23:16:47.404 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:16:47.405 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.update
+2020-03-13 23:16:47.405 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Blog(blogId=1238479919940927488, blogTitle=修改后的测试博客, blogImage=null, blogContent=null, blogGoods=null, blogRead=null, blogCollection=null, blogType=null, blogRemark=null, blogComment=null, blogSource=null, createdTime=null, updateTime=null, version=null, deleted=null)]
+2020-03-13 23:16:47.526 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 123
+2020-03-13 23:16:47.526 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"msg":"更新成功!"}
+2020-03-13 23:17:26.475 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/update
+2020-03-13 23:17:26.475 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : PUT
+2020-03-13 23:17:26.476 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:17:26.476 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.update
+2020-03-13 23:17:26.477 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Blog(blogId=1238479919940927488, blogTitle=修改后的测试博客, blogImage=null, blogContent=null, blogGoods=null, blogRead=null, blogCollection=null, blogType=null, blogRemark=null, blogComment=null, blogSource=null, createdTime=null, updateTime=null, version=1, deleted=null)]
+2020-03-13 23:17:26.596 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 121
+2020-03-13 23:17:26.597 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"msg":"更新成功!"}
+2020-03-13 23:18:07.238 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/delete/1238479919940927488
+2020-03-13 23:18:07.239 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : DELETE
+2020-03-13 23:18:07.240 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:18:07.241 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.delete
+2020-03-13 23:18:07.242 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[1238479919940927488]
+2020-03-13 23:18:07.361 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 123
+2020-03-13 23:18:07.362 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"msg":"删除成功!"}
+2020-03-13 23:19:01.176 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/get/1238479919940927488
+2020-03-13 23:19:01.177 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : GET
+2020-03-13 23:19:01.178 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:19:01.179 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.get
+2020-03-13 23:19:01.179 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[1238479919940927488]
+2020-03-13 23:19:01.259 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 83
+2020-03-13 23:19:01.260 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"msg":"操作成功！"}
+2020-03-13 23:19:37.557 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/get/1238479919940927488
+2020-03-13 23:19:37.558 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : GET
+2020-03-13 23:19:37.558 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:19:37.559 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.get
+2020-03-13 23:19:37.560 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[1238479919940927488]
+2020-03-13 23:19:37.648 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 91
+2020-03-13 23:19:37.658 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"data":{"blogCollection":0,"blogComment":0,"blogContent":"测试内容","blogGoods":0,"blogId":"1238479919940927488","blogRead":0,"blogTitle":"修改后的测试博客","blogType":6,"createdTime":"2020-03-13 22:59:57","version":2},"msg":"操作成功！"}
+2020-03-13 23:20:44.984 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/read/1238479919940927488
+2020-03-13 23:20:44.984 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : GET
+2020-03-13 23:20:44.986 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:20:44.986 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.read
+2020-03-13 23:20:44.987 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[1238479919940927488]
+2020-03-13 23:20:45.296 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 312
+2020-03-13 23:20:45.297 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"data":{"blogCollection":0,"blogComment":0,"blogContent":"测试内容","blogGoods":0,"blogId":"1238479919940927488","blogRead":1,"blogTitle":"修改后的测试博客","createdTime":"2020-03-13 22:59:57","typeName":"Spring Boot"},"msg":"操作成功！"}
+2020-03-13 23:20:49.105 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/read/1238479919940927488
+2020-03-13 23:20:49.106 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : GET
+2020-03-13 23:20:49.106 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:20:49.107 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.read
+2020-03-13 23:20:49.107 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[1238479919940927488]
+2020-03-13 23:20:49.443 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 338
+2020-03-13 23:20:49.443 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"data":{"blogCollection":0,"blogComment":0,"blogContent":"测试内容","blogGoods":0,"blogId":"1238479919940927488","blogRead":2,"blogTitle":"修改后的测试博客","createdTime":"2020-03-13 22:59:57","typeName":"Spring Boot"},"msg":"操作成功！"}
+2020-03-13 23:20:51.225 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /blog/read/1238479919940927488
+2020-03-13 23:20:51.225 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : GET
+2020-03-13 23:20:51.227 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 23:20:51.227 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.BlogController.read
+2020-03-13 23:20:51.228 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[1238479919940927488]
+2020-03-13 23:20:51.535 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 311
+2020-03-13 23:20:51.535 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"data":{"blogCollection":0,"blogComment":0,"blogContent":"测试内容","blogGoods":0,"blogId":"1238479919940927488","blogRead":3,"blogTitle":"修改后的测试博客","createdTime":"2020-03-13 22:59:57","typeName":"Spring Boot"},"msg":"操作成功！"}

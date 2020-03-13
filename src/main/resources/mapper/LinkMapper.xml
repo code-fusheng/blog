@@ -17,4 +17,51 @@
         link_id, link_name, link_url, created_time,
         update_time, version, deleted
     </sql>
+    <!-- 添加 -->
+    <insert id="save" parameterType="xyz.fusheng.blog.pojo.Link">
+        insert into bl_link(link_name, link_url)
+        values (#{linkName}, #{linkUrl})
+    </insert>
+    <!-- 修改 -->
+    <update id="update" parameterType="xyz.fusheng.blog.pojo.Link">
+        update bl_link set
+        version = version+1
+        <if test="linkName!=null and linkName!=''">
+            ,link_name = #{linkName}
+        </if>
+        <if test="linkUrl!=null and linkUrl!=''">
+            ,link_url = #{linkUrl}
+        </if>
+        where link_id = #{linkId}
+        and version = #{version}
+    </update>
+    <!-- 根据id查询 -->
+    <select id="getById" resultMap="BaseResultMap">
+        select
+        link_id,
+        link_name,
+        link_url,
+        version
+        from bl_link
+        where link_id = #{value}
+        and deleted = 0
+    </select>
+    <!-- 查询所有 -->
+    <select id="getAll" resultMap="BaseResultMap">
+        select
+            link_id,
+            link_name,
+            link_url,
+            created_time,
+            update_time
+        from bl_link
+        where deleted = 0
+    </select>
+    <!-- 根据id删除 -->
+    <update id="deleteById">
+        update bl_link set
+        deleted = 1
+        where link_id = #{value}
+    </update>
+
 </mapper>

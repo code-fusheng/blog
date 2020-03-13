@@ -6,11 +6,13 @@
  */
 package xyz.fusheng.blog.pojo;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 import java.io.Serializable;
 
 @Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class BlogCollection  implements Serializable {
 
     private static final long serialVersionUID = -535915810554536111L;

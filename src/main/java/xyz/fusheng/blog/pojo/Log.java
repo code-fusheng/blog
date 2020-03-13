@@ -6,11 +6,13 @@
  */
 package xyz.fusheng.blog.pojo;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 import java.io.Serializable;
 
 @Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Log implements Serializable {
     /**
      * 日志id

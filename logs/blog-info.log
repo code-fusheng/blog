@@ -727,3 +727,10 @@
 2020-03-13 15:38:03.412 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[2]
 2020-03-13 15:38:03.502 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 94
 2020-03-13 15:38:03.503 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"data":{"linkId":2,"linkName":"alibaba","linkUrl":"http://www.alibaba.com","version":2},"msg":"操作成功！"}
+2020-03-13 15:54:39.717 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /link/list
+2020-03-13 15:54:39.718 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : GET
+2020-03-13 15:54:39.719 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-13 15:54:39.719 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.LinkController.list
+2020-03-13 15:54:39.720 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[]
+2020-03-13 15:54:41.808 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.doAround:70 -耗时 : 2091
+2020-03-13 15:54:41.809 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:84 -返回值:{"code":20000,"data":[{"createdTime":"2020-03-13 15:18:13","linkId":1,"linkName":"baidu","linkUrl":"http://www.baidu.com","updateTime":"2020-03-13 15:32:48"},{"createdTime":"2020-03-13 15:19:45","linkId":2,"linkName":"alibaba","linkUrl":"http://www.alibaba.com","updateTime":"2020-03-13 15:33:13"},{"createdTime":"2020-03-13 15:20:12","linkId":3,"linkName":"github","linkUrl":"https://github.com/","updateTime":"2020-03-13 15:20:12"},{"createdTime":"2020-03-13 15:37:46","linkId":5,"linkName":"youdao","linkUrl":"http://note.youdao.com/","updateTime":"2020-03-13 15:37:46"}],"msg":"操作成功！"}

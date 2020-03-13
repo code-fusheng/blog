@@ -15,4 +15,22 @@ public interface AdminService {
      * @return
      */
     Admin getByUsername(String username);
+
+    /**
+     * 查询管理员
+     * @return
+     */
+    Admin getAdmin();
+
+    /**
+     * 更新管理员信息
+     * @param admin
+     */
+    void updateInfo(Admin admin);
+
+    /**
+     * 更新管理员密码
+     * @param admin
+     */
+    void updatePassword(Admin admin);
 }

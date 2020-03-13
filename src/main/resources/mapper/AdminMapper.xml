@@ -22,4 +22,37 @@
         from bl_admin
         where username = #{value}
     </select>
+    <!-- 查询管理员 -->
+    <select id="getAdmin" resultMap="BaseResultMap">
+        select
+        id, name, header, signature, comment, username
+        from bl_admin
+        limit 1
+    </select>
+    <!-- 更新管理员信息 -->
+    <update id="update" parameterType="xyz.fusheng.blog.pojo.Admin">
+        update bl_admin
+        <set>
+            <if test="name!=null and name!=''">
+                name = #{name},
+            </if>
+            <if test="header!=null and header!=''">
+                header = #{header},
+            </if>
+            <if test="signature!=null and signature!=''">
+                signature = #{signature},
+            </if>
+            <if test="comment!=null and comment!=''">
+                comment = #{comment},
+            </if>
+            <if test="username!=null and username!=''">
+                username = #{username},
+            </if>
+            <if test="password!=null and password!=''">
+                password = #{password},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
 </mapper>

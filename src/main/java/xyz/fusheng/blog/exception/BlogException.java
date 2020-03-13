@@ -11,7 +11,7 @@ import xyz.fusheng.blog.enums.ResultEnum;
 
 
 @Getter
-public class BlogException extends RuntimeException{
+public class BlogException extends RuntimeException {
 
     /**
      * RuntimeException 运行时异常：是那些可能在 Java 虚拟机正常运行期间抛出的异常的超类。

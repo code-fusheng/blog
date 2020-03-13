@@ -44,9 +44,9 @@ public class AdminRealm extends AuthorizingRealm {
         UsernamePasswordToken usernamePasswordToken = (UsernamePasswordToken) token;
         String username = usernamePasswordToken.getUsername();
         Admin admin = adminService.getByUsername(username);
-        if (admin == null){
+        if (admin == null) {
             // 用户不存在
-            throw new BlogException(ResultEnum.ERROR.getCode(),"用户不存在!");
+            throw new BlogException(ResultEnum.ERROR.getCode(), "用户不存在!");
         }
 
         return new SimpleAuthenticationInfo(admin, admin.getPassword(), this.getName());

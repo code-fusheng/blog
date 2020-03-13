@@ -18,7 +18,7 @@ public class BeanConfig {
      * @return
      */
     @Bean
-    public IdWorker idWorker(){
+    public IdWorker idWorker() {
         return new IdWorker();
     }
 

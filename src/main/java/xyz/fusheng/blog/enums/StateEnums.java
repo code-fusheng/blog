@@ -1,7 +1,8 @@
 /**
  * FileName: StateEnum
- * @Author:   fusheng
- * @Date:     2020/3/10 22:04
+ *
+ * @Author: fusheng
+ * @Date: 2020/3/10 22:04
  * Description: 状态码枚举
  */
 package xyz.fusheng.blog.enums;

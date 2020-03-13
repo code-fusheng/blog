@@ -29,7 +29,6 @@ public class BlogController {
 
     /**
      * 保存
-     *
      * @param blog
      * @return
      */
@@ -41,7 +40,6 @@ public class BlogController {
 
     /**
      * 根据id查询[后台使用]
-     *
      * @param id
      * @return
      */
@@ -53,7 +51,6 @@ public class BlogController {
 
     /**
      * 更新
-     *
      * @param blog
      * @return
      */
@@ -65,7 +62,6 @@ public class BlogController {
 
     /**
      * 根据id阅读[前端页面展现博客详细信息]
-     *
      * @param id
      * @return
      */
@@ -77,7 +73,6 @@ public class BlogController {
 
     /**
      * 根据id删除
-     *
      * @param id
      * @return
      */

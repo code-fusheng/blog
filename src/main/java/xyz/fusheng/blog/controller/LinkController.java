@@ -29,7 +29,7 @@ public class LinkController {
      * @return
      */
     @PostMapping("/save")
-    public Result<Object> save(@RequestBody Link link){
+    public Result<Object> save(@RequestBody Link link) {
         linkService.save(link);
         return new Result<>("添加成功!");
     }
@@ -40,7 +40,7 @@ public class LinkController {
      * @return
      */
     @PutMapping("/update")
-    public Result<Object> update(@RequestBody Link link){
+    public Result<Object> update(@RequestBody Link link) {
         linkService.update(link);
         return new Result<>("修改成功!");
     }
@@ -51,7 +51,7 @@ public class LinkController {
      * @return
      */
     @GetMapping("/get/{id}")
-    public Result<Object> get(@PathVariable("id") Integer id){
+    public Result<Object> get(@PathVariable("id") Integer id) {
         Link link = linkService.getById(id);
         return new Result<>(link);
     }
@@ -61,7 +61,7 @@ public class LinkController {
      * @return
      */
     @GetMapping("/list")
-    public Result<List<Link>> list(){
+    public Result<List<Link>> list() {
         List<Link> linkList = linkService.getAll();
         return new Result<>(linkList);
     }
@@ -72,11 +72,10 @@ public class LinkController {
      * @return
      */
     @DeleteMapping("/delete/{id}")
-    public Result<Object> delete(@PathVariable("id") Integer id){
+    public Result<Object> delete(@PathVariable("id") Integer id) {
         linkService.deleteById(id);
         return new Result<>("删除成功!");
     }
-
 
 
 }

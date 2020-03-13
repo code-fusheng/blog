@@ -30,6 +30,7 @@ import java.util.Arrays;
 /**
  * 切面输出基本信息
  * 以及记录日志
+ *
  * @author fusheng
  */
 @Aspect
@@ -106,7 +107,6 @@ public class RequestAspect {
 
     /**
      * 打印请求日志
-     *
      * @param joinPoint
      * @param request
      * @param uri

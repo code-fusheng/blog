@@ -16,17 +16,17 @@ import xyz.fusheng.blog.utils.Result;
 @ControllerAdvice
 @Slf4j
 public class BlogExceptionAdvice {
-     /**
-       * 功能描述：统一异常处理
-       * @since: 1.0.0
-       * @Author: 25610
-       * @Date: 2020/3/11 11:21
-       */
+    /**
+     * 功能描述：统一异常处理
+     * @since: 1.0.0
+     * @Author: 25610
+     * @Date: 2020/3/11 11:21
+     */
     @ExceptionHandler(BlogException.class)
     @ResponseBody
-    public Result<Object> exceptionHandler(BlogException exception){
+    public Result<Object> exceptionHandler(BlogException exception) {
         exception.printStackTrace();
-        log.error("统一异常处理",exception);
-        return new Result<>(exception.getErrorCode(),exception.getMessage());
+        log.error("统一异常处理", exception);
+        return new Result<>(exception.getErrorCode(), exception.getMessage());
     }
 }

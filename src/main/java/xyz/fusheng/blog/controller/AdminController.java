@@ -32,23 +32,22 @@ public class AdminController {
     private AdminService adminService;
 
     /**
-     *
      * @param admin
      * @return
      */
     @PostMapping("/login")
-    public Result<Object> login(@RequestBody Admin admin){
+    public Result<Object> login(@RequestBody Admin admin) {
         // 登录失败
-        if(admin == null || StringUtils.isBlank(admin.getUsername()) || StringUtils.isBlank(admin.getPassword())){
-            return new Result<>(ResultEnum.PARAMS_NULL.getCode(),"用户名或密码错误");
+        if (admin == null || StringUtils.isBlank(admin.getUsername()) || StringUtils.isBlank(admin.getPassword())) {
+            return new Result<>(ResultEnum.PARAMS_NULL.getCode(), "用户名或密码错误");
         }
         Subject subject = SecurityUtils.getSubject();
-        AuthenticationToken authenticationToken = new UsernamePasswordToken(admin.getUsername(),admin.getPassword());
+        AuthenticationToken authenticationToken = new UsernamePasswordToken(admin.getUsername(), admin.getPassword());
         try {
             subject.login(authenticationToken);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            return new Result<>(ResultEnum.PARAMS_NULL.getCode(),"用户名或密码错误");
+            return new Result<>(ResultEnum.PARAMS_NULL.getCode(), "用户名或密码错误");
         }
         // 登录成功
         Serializable sessionId = subject.getSession().getId();
@@ -62,7 +61,7 @@ public class AdminController {
      * @return
      */
     @GetMapping("/info")
-    public Result<Admin> getLoginInfo(){
+    public Result<Admin> getLoginInfo() {
         Admin loginAdmin = (Admin) ShiroUtils.getLoginUser();
         loginAdmin.setPassword("******");
         return new Result<>(loginAdmin);
@@ -73,7 +72,7 @@ public class AdminController {
      * @return
      */
     @GetMapping("/getAdmin")
-    public Result<Admin> getAdmin(){
+    public Result<Admin> getAdmin() {
         Admin admin = adminService.getAdmin();
         return new Result<>(admin);
     }
@@ -84,7 +83,7 @@ public class AdminController {
      * @return
      */
     @PutMapping("/updateInfo")
-    public Result<Object> updateInfo(@RequestBody Admin admin){
+    public Result<Object> updateInfo(@RequestBody Admin admin) {
         adminService.updateInfo(admin);
         return new Result<>("更新成功!");
     }
@@ -95,7 +94,7 @@ public class AdminController {
      * @return
      */
     @PutMapping("/updatePassword")
-    public Result<Object> updatePassword(@RequestBody Admin admin){
+    public Result<Object> updatePassword(@RequestBody Admin admin) {
         adminService.updatePassword(admin);
         return new Result<>("更新成功!");
     }

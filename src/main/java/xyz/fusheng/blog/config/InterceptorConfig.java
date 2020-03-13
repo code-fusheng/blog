@@ -16,7 +16,7 @@ import xyz.fusheng.blog.interceptor.LoginInterceptor;
 public class InterceptorConfig extends WebMvcConfigurationSupport {
 
     @Bean
-    public LoginInterceptor loginInterceptor(){
+    public LoginInterceptor loginInterceptor() {
         return new LoginInterceptor();
     }
 

@@ -27,7 +27,7 @@ public class TypeController {
      * @return
      */
     @PostMapping("/save")
-    public Result<Object> save(@RequestBody Type type){
+    public Result<Object> save(@RequestBody Type type) {
         typeService.save(type);
         return new Result<>("添加成功!");
     }
@@ -37,7 +37,7 @@ public class TypeController {
      * @return
      */
     @GetMapping("/listBack")
-    public Result<List<Type>> list(){
+    public Result<List<Type>> list() {
         List<Type> typeList = typeService.getAll();
         return new Result<>(typeList);
     }
@@ -47,7 +47,7 @@ public class TypeController {
      * @return
      */
     @GetMapping("/getList")
-    public Result<List<Type>> getList(){
+    public Result<List<Type>> getList() {
         List<Type> typeList = typeService.getTypeList();
         return new Result<>(typeList);
     }
@@ -58,51 +58,55 @@ public class TypeController {
      * @return
      */
     @GetMapping("/get/{id}")
-    public Result<Type> getById(@PathVariable("id") Integer id){
+    public Result<Type> getById(@PathVariable("id") Integer id) {
         Type type = typeService.getById(id);
         return new Result<>(type);
     }
 
     /**
      * 根据id更新
+     *
      * @param type
      * @return
      */
     @PutMapping("/update")
-    public Result<Object> update(@RequestBody Type type){
+    public Result<Object> update(@RequestBody Type type) {
         typeService.update(type);
         return new Result<>("更新成功!");
     }
 
     /**
      * 根据id启用
+     *
      * @param id
      * @return
      */
     @PutMapping("/enable/{id}")
-    public Result<Object> enable(@PathVariable("id") Integer id){
+    public Result<Object> enable(@PathVariable("id") Integer id) {
         typeService.enableById(id);
         return new Result<>("已启用");
     }
 
     /**
      * 根据id弃用
+     *
      * @param id
      * @return
      */
     @PutMapping("/disable/{id}")
-    public Result<Object> disable(@PathVariable("id") Integer id){
+    public Result<Object> disable(@PathVariable("id") Integer id) {
         typeService.disableById(id);
         return new Result<>("已弃用");
     }
 
     /**
      * 根据id删除
+     *
      * @param id
      * @return
      */
     @DeleteMapping("/delete/{id}")
-    public Result<Object> delete(@PathVariable("id") Integer id){
+    public Result<Object> delete(@PathVariable("id") Integer id) {
         typeService.deleteById(id);
         return new Result<>("删除成功!");
     }

@@ -22,10 +22,10 @@ public class TestController {
      */
 
     @GetMapping("/testException/{id}")
-    public Result<Object> testException(@PathVariable("id") Integer id){
-        if (id == 1){
+    public Result<Object> testException(@PathVariable("id") Integer id) {
+        if (id == 1) {
             return new Result<>();
-        }else {
+        } else {
             throw new BlogException("发生了异常");
         }
     }

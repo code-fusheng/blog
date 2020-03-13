@@ -25,10 +25,10 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         // 获取 token
         String token = request.getHeader("Authorization");
-        if(StringUtils.isNotBlank(token)){
+        if (StringUtils.isNotBlank(token)) {
             // token 不为空,获取当前登录用户
             Object loginUser = ShiroUtils.getLoginUser();
-            if(loginUser != null){
+            if (loginUser != null) {
                 // 说明 token 有效
                 return true;
             }

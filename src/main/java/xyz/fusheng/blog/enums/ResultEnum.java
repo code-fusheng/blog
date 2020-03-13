@@ -1,7 +1,7 @@
 /**
  * @FileName: ResultEnum
- * @Author:   fusheng
- * @Date:     2020/3/10 22:04
+ * @Author: fusheng
+ * @Date: 2020/3/10 22:04
  * Description: 返回结果枚举
  */
 package xyz.fusheng.blog.enums;
@@ -19,8 +19,7 @@ public enum ResultEnum {
     PARAMS_NULL(40002, "参数不能为空！"),
     PARAMS_ERROR(40005, "参数不合法！"),
 
-    NOT_LOGIN(40003, "当前账号未登录！")
-    ;
+    NOT_LOGIN(40003, "当前账号未登录！");
     private Integer code;
     private String msg;
 

@@ -20,7 +20,7 @@
         log_id, log_url, log_params, log_status, log_message,
         log_method, log_time, log_result, log_ip, created_time
     </sql>
-
+    <!-- 保存 -->
     <insert id="save" parameterType="xyz.fusheng.blog.pojo.Log">
         insert into bl_log(
             log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip
@@ -29,4 +29,64 @@
             #{logResult}, #{logIp}
         )
     </insert>
+    <!-- 分页查询 -->
+    <select id="getByPage" resultMap="BaseResultMap" parameterType="xyz.fusheng.blog.utils.Page">
+        select
+        log_id, log_url, log_params, log_status, log_message,
+        log_method, log_time, log_result, log_ip, created_time
+        from bl_log
+        <where>
+            <if test="params.logUrl!=null and params.logUrl!=''">
+                and log_url = #{params.logUrl}
+            </if>
+            <if test="params.logStatus!=null">
+                and log_status = #{params.logStatus}
+            </if>
+            <if test="params.logMethod!=null and params.logMethod!=''">
+                and log_method = #{params.logMethod}
+            </if>
+            <if test="params.logIp!=null and params.logIp!=''">
+                and log_ip = #{params.logIp}
+            </if>
+        </where>
+        <if test="sortColumn!=null and sortColumn!=''">
+            order by ${sortColumn} ${sortMethod}
+        </if>
+        limit #{index}, #{pageSize}
+    </select>
+    <!-- 统计总数 -->
+    <select id="getCountByPage" resultType="java.lang.Integer" parameterType="xyz.fusheng.blog.utils.Page">
+        select
+        count(*)
+        from bl_log
+        <where>
+            <if test="params.logUrl!=null and params.logUrl!=''">
+                and log_url = #{params.logUrl}
+            </if>
+            <if test="params.logStatus!=null">
+                and log_status = #{params.logStatus}
+            </if>
+            <if test="params.logMethod!=null and params.logMethod!=''">
+                and log_method = #{params.logMethod}
+            </if>
+            <if test="params.logIp!=null and params.logIp!=''">
+                and log_ip = #{params.logIp}
+            </if>
+        </where>
+    </select>
+    <!-- 根据id删除 -->
+    <delete id="deleteById">
+        delete from bl_log
+        where log_id = #{id}
+    </delete>
+    <!-- 根据id集合删除 -->
+    <delete id="deleteByIds">
+        delete from bl_log
+        where id in
+        <foreach collection="ids" separator="," item="id" open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+
 </mapper>

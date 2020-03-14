@@ -544,3 +544,235 @@
 2020-03-14 14:40:45.378 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[]
 2020-03-14 14:40:45.461 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 85
 2020-03-14 14:40:45.463 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"data":[{"artist":"张杰","cover":"zzzzzzzzz","id":2,"name":"测试歌曲2","url":"zzzzzz"},{"artist":"张杰","cover":"yyyyyyyyy","id":3,"name":"测试歌曲3","url":"yyyyyy"},{"artist":"张杰","cover":"000000000","id":4,"name":"测试歌曲4","url":"000000"}],"msg":"操作成功！"}
+2020-03-14 14:42:56.693 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /music/enable/1
+2020-03-14 14:42:56.694 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : PUT
+2020-03-14 14:42:56.695 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 14:42:56.695 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.MusicController.enable
+2020-03-14 14:42:56.695 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[1]
+2020-03-14 14:43:01.098 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /music/enable/2
+2020-03-14 14:43:01.099 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : PUT
+2020-03-14 14:43:01.102 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 14:43:01.103 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.MusicController.enable
+2020-03-14 14:43:01.104 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[2]
+2020-03-14 14:43:01.311 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 213
+2020-03-14 14:43:01.312 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"msg":"启用成功"}
+2020-03-14 14:43:15.986 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /music/disable/2
+2020-03-14 14:43:15.987 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : PUT
+2020-03-14 14:43:15.988 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 14:43:15.988 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.MusicController.disable
+2020-03-14 14:43:15.989 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[2]
+2020-03-14 14:43:16.188 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 202
+2020-03-14 14:43:16.190 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"msg":"弃用成功"}
+2020-03-14 14:43:28.724 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /music/getList
+2020-03-14 14:43:28.725 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : GET
+2020-03-14 14:43:28.726 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 14:43:28.727 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.MusicController.getList
+2020-03-14 14:43:28.728 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[]
+2020-03-14 14:43:28.807 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 83
+2020-03-14 14:43:28.807 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"data":[{"artist":"张杰","cover":"yyyyyyyyy","id":3,"name":"测试歌曲3","url":"yyyyyy"},{"artist":"张杰","cover":"000000000","id":4,"name":"测试歌曲4","url":"000000"}],"msg":"操作成功！"}
+2020-03-14 14:43:38.744 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /music/getByPage
+2020-03-14 14:43:38.746 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-14 14:43:38.747 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 14:43:38.747 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.MusicController.getByPage
+2020-03-14 14:43:38.748 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Page(currentPage=1, pageSize=2, totalPage=0, totalCount=0, index=0, list=null, params={}, sortColumn=created_time, sortMethod=desc)]
+2020-03-14 14:43:38.905 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 161
+2020-03-14 14:43:38.906 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"data":{"index":0,"list":[{"artist":"张杰","cover":"000000000","createdTime":"2020-03-14 14:32:57","enabled":1,"id":4,"name":"测试歌曲4","url":"000000"},{"artist":"张杰","cover":"yyyyyyyyy","createdTime":"2020-03-14 14:32:14","enabled":1,"id":3,"name":"测试歌曲3","url":"yyyyyy"}],"pageSize":2,"params":{},"sortColumn":"created_time","sortMethod":"desc","totalCount":3,"totalPage":2},"msg":"操作成功！"}
+2020-03-14 17:41:45.252 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarting:55 -Starting BlogApplication on DESKTOP-UFFICG8 with PID 9144 (started by 25610 in G:\Code_fusheng\SpringBoot+Vue【个人博客】\blog)
+2020-03-14 17:41:45.567 INFO  [main]xyz.fusheng.blog.BlogApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2020-03-14 17:41:48.499 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'shiroConfig' of type [xyz.fusheng.blog.config.ShiroConfig$$EnhancerBySpringCGLIB$$83a2d04e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 17:41:48.582 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 17:41:48.610 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$a6240c8f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 17:41:48.619 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure$$EnhancerBySpringCGLIB$$8cfbb0d1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 17:41:48.624 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
+2020-03-14 17:41:48.705 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 17:41:48.734 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 17:41:48.784 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'statFilter' of type [com.alibaba.druid.filter.stat.StatFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 17:41:53.103 INFO  [main]com.alibaba.druid.pool.DruidDataSource.init:930 -{dataSource-1} inited
+2020-03-14 17:41:53.106 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'dataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 17:41:53.471 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 17:41:54.262 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 17:41:54.274 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 17:41:54.284 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 17:41:54.288 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminMapper' of type [com.sun.proxy.$Proxy80] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 17:41:54.291 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminServiceImpl' of type [xyz.fusheng.blog.service.impl.AdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 17:41:54.292 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminRealm' of type [xyz.fusheng.blog.realm.AdminRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 17:41:54.359 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 17:41:54.396 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 17:41:54.971 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:92 -Tomcat initialized with port(s): 8001 (http)
+2020-03-14 17:41:54.982 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8001"]
+2020-03-14 17:41:54.983 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-14 17:41:54.984 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-14 17:41:55.098 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-14 17:41:55.098 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 9182 ms
+2020-03-14 17:41:56.820 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8001"]
+2020-03-14 17:41:56.849 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:204 -Tomcat started on port(s): 8001 (http) with context path ''
+2020-03-14 17:41:56.854 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarted:61 -Started BlogApplication in 14.961 seconds (JVM running for 18.19)
+2020-03-14 17:42:18.511 INFO  [http-nio-8001-exec-2]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-14 17:42:18.512 INFO  [http-nio-8001-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
+2020-03-14 17:42:18.537 INFO  [http-nio-8001-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 24 ms
+2020-03-14 17:42:53.497 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /admin/login
+2020-03-14 17:42:53.508 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-14 17:42:53.509 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 17:42:53.512 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.AdminController.login
+2020-03-14 17:42:53.513 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Admin(id=null, name=null, header=null, signature=null, comment=null, username=admin, password=e10adc3949ba59abbe56e057f20f883e)]
+2020-03-14 17:42:53.761 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 265
+2020-03-14 17:42:53.903 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"data":{"token":"815817AFB217386080EC682CBA4D4C19"},"msg":"操作成功！"}
+2020-03-14 17:43:14.805 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /music/getList
+2020-03-14 17:43:14.806 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : GET
+2020-03-14 17:43:14.806 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 17:43:14.807 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.MusicController.getList
+2020-03-14 17:43:14.807 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[]
+2020-03-14 17:43:14.899 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 94
+2020-03-14 17:43:14.910 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"data":[{"artist":"张杰","cover":"yyyyyyyyy","id":3,"name":"测试歌曲3","url":"yyyyyy"},{"artist":"张杰","cover":"000000000","id":4,"name":"测试歌曲4","url":"000000"}],"msg":"操作成功！"}
+2020-03-14 17:48:39.118 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /music/getByPage
+2020-03-14 17:48:39.119 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-14 17:48:39.120 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 17:48:39.120 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.MusicController.getByPage
+2020-03-14 17:48:39.121 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Page(currentPage=1, pageSize=2, totalPage=0, totalCount=0, index=0, list=null, params={}, sortColumn=created_time, sortMethod=desc)]
+2020-03-14 17:48:41.383 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 2265
+2020-03-14 17:48:41.392 INFO  [http-nio-8001-exec-10]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"data":{"index":0,"list":[{"artist":"张杰","cover":"000000000","createdTime":"2020-03-14 14:32:57","enabled":1,"id":4,"name":"测试歌曲4","url":"000000"},{"artist":"张杰","cover":"yyyyyyyyy","createdTime":"2020-03-14 14:32:14","enabled":1,"id":3,"name":"测试歌曲3","url":"yyyyyy"}],"pageSize":2,"params":{},"sortColumn":"created_time","sortMethod":"desc","totalCount":3,"totalPage":2},"msg":"操作成功！"}
+2020-03-14 20:45:25.651 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarting:55 -Starting BlogApplication on DESKTOP-UFFICG8 with PID 17116 (started by 25610 in G:\Code_fusheng\SpringBoot+Vue【个人博客】\blog)
+2020-03-14 20:45:25.723 INFO  [main]xyz.fusheng.blog.BlogApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2020-03-14 20:45:27.457 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'shiroConfig' of type [xyz.fusheng.blog.config.ShiroConfig$$EnhancerBySpringCGLIB$$3c97232d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 20:45:27.511 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 20:45:27.526 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$5f185f6e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 20:45:27.532 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure$$EnhancerBySpringCGLIB$$45f003b0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 20:45:27.540 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
+2020-03-14 20:45:27.615 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 20:45:27.640 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 20:45:27.678 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'statFilter' of type [com.alibaba.druid.filter.stat.StatFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 20:45:44.523 INFO  [main]com.alibaba.druid.pool.DruidDataSource.init:930 -{dataSource-1} inited
+2020-03-14 20:45:44.524 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'dataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 20:45:44.610 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 20:45:45.207 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 20:45:45.217 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 20:45:45.230 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 20:45:45.235 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminMapper' of type [com.sun.proxy.$Proxy80] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 20:45:45.238 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminServiceImpl' of type [xyz.fusheng.blog.service.impl.AdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 20:45:45.241 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminRealm' of type [xyz.fusheng.blog.realm.AdminRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 20:45:45.301 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 20:45:45.386 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 20:45:46.003 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:92 -Tomcat initialized with port(s): 8001 (http)
+2020-03-14 20:45:46.026 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8001"]
+2020-03-14 20:45:46.028 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-14 20:45:46.030 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-14 20:45:46.247 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-14 20:45:46.249 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 20384 ms
+2020-03-14 20:45:48.103 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8001"]
+2020-03-14 20:45:48.145 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:204 -Tomcat started on port(s): 8001 (http) with context path ''
+2020-03-14 20:45:48.149 INFO  [main]xyz.fusheng.blog.BlogApplication.logStarted:61 -Started BlogApplication in 23.831 seconds (JVM running for 26.248)
+2020-03-14 20:47:30.879 INFO  [http-nio-8001-exec-2]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-14 20:47:30.880 INFO  [http-nio-8001-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
+2020-03-14 20:47:30.910 INFO  [http-nio-8001-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 30 ms
+2020-03-14 20:47:31.193 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /admin/login
+2020-03-14 20:47:31.205 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-14 20:47:31.207 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 20:47:31.210 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.AdminController.login
+2020-03-14 20:47:31.211 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Admin(id=null, name=null, header=null, signature=null, comment=null, username=admin, password=e10adc3949ba59abbe56e057f20f883e)]
+2020-03-14 20:47:31.690 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 497
+2020-03-14 20:47:31.880 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"data":{"token":"3066C0C3A3691FCF582926D6C6CC6369"},"msg":"操作成功！"}
+2020-03-14 21:12:48.705 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /user/save
+2020-03-14 21:12:48.706 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-14 21:12:48.707 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 21:12:48.708 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.UserController.save
+2020-03-14 21:12:48.709 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[User(userId=null, username=user1, password=24c9e15e52afc47c225b757e7bee1f9d, name=测试用户1, sex=1, header=null, nickname=测试用户1, userEmail=null, createdTime=null, updateTime=null, version=null, deleted=null)]
+2020-03-14 21:12:50.864 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 2159
+2020-03-14 21:12:50.864 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"msg":"添加成功"}
+2020-03-14 21:14:59.287 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /user/save
+2020-03-14 21:14:59.288 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-14 21:14:59.289 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 21:14:59.290 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.UserController.save
+2020-03-14 21:14:59.291 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[User(userId=null, username=user1, password=24c9e15e52afc47c225b757e7bee1f9d, name=测试用户1, sex=1, header=null, nickname=测试用户1, userEmail=123456789qq.com, createdTime=null, updateTime=null, version=null, deleted=null)]
+2020-03-14 21:14:59.427 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 140
+2020-03-14 21:14:59.429 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"msg":"添加成功"}
+2020-03-14 21:16:19.003 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /user/save
+2020-03-14 21:16:19.004 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-14 21:16:19.005 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 21:16:19.006 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.UserController.save
+2020-03-14 21:16:19.006 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[User(userId=null, username=user2, password=7e58d63b60197ceb55a1c487989a3720, name=测试用户2, sex=1, header=null, nickname=测试用户2, userEmail=0000000000qq.com, createdTime=null, updateTime=null, version=null, deleted=null)]
+2020-03-14 21:16:19.126 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 123
+2020-03-14 21:16:19.127 INFO  [http-nio-8001-exec-1]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"msg":"添加成功"}
+2020-03-14 21:16:41.527 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /user/save
+2020-03-14 21:16:41.528 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-14 21:16:41.528 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 21:16:41.530 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.UserController.save
+2020-03-14 21:16:41.530 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[User(userId=null, username=user3, password=92877af70a45fd6a2ed7fe81e1236b78, name=测试用户3, sex=2, header=null, nickname=测试用户3, userEmail=0000000000qq.com, createdTime=null, updateTime=null, version=null, deleted=null)]
+2020-03-14 21:16:41.649 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 122
+2020-03-14 21:16:41.650 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"msg":"添加成功"}
+2020-03-14 21:17:58.837 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /user/save
+2020-03-14 21:17:58.838 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-14 21:17:58.839 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 21:17:58.840 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.UserController.save
+2020-03-14 21:17:58.840 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[User(userId=null, username=user4, password=3f02ebe3d7929b091e3d8ccfde2f3bc6, name=测试用户4, sex=2, header=null, nickname=测试用户4, userEmail=222222222qq.com, createdTime=null, updateTime=null, version=null, deleted=null)]
+2020-03-14 21:17:58.959 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 122
+2020-03-14 21:17:58.959 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"msg":"添加成功"}
+2020-03-14 21:18:07.236 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /user/getByPage
+2020-03-14 21:18:07.237 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-14 21:18:07.237 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 21:18:07.238 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.UserController.getByPage
+2020-03-14 21:18:07.239 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Page(currentPage=1, pageSize=2, totalPage=0, totalCount=0, index=0, list=null, params={}, sortColumn=created_time, sortMethod=desc)]
+2020-03-14 21:18:07.467 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 232
+2020-03-14 21:18:07.497 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"data":{"index":0,"list":[{"createdTime":"2020-03-14 21:17:59","name":"测试用户4","nickname":"测试用户4","sex":2,"updateTime":"2020-03-14 21:17:59","userEmail":"222222222qq.com","userId":7,"username":"user4"},{"createdTime":"2020-03-14 21:16:41","name":"测试用户3","nickname":"测试用户3","sex":2,"updateTime":"2020-03-14 21:16:41","userEmail":"0000000000qq.com","userId":6,"username":"user3"}],"pageSize":2,"params":{},"sortColumn":"created_time","sortMethod":"desc","totalCount":4,"totalPage":2},"msg":"操作成功！"}
+2020-03-14 21:19:52.358 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /user/get/1
+2020-03-14 21:19:52.360 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : GET
+2020-03-14 21:19:52.362 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 21:19:52.362 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.UserController.get
+2020-03-14 21:19:52.363 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[1]
+2020-03-14 21:19:52.445 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 87
+2020-03-14 21:19:52.446 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"msg":"操作成功！"}
+2020-03-14 21:23:27.230 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /user/updateInfo
+2020-03-14 21:23:27.231 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : PUT
+2020-03-14 21:23:27.232 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 21:23:27.233 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.UserController.updateInfo
+2020-03-14 21:23:27.233 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[User(userId=4, username=测试user4, password=3f02ebe3d7929b091e3d8ccfde2f3bc6, name=测试用户4, sex=2, header=null, nickname=测试用户4, userEmail=222222222qq.com, createdTime=null, updateTime=null, version=null, deleted=null)]
+2020-03-14 21:23:27.356 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 126
+2020-03-14 21:23:27.356 INFO  [http-nio-8001-exec-3]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"msg":"修改成功!"}
+2020-03-14 21:23:51.705 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /user/save
+2020-03-14 21:23:51.706 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-14 21:23:51.707 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 21:23:51.708 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.UserController.save
+2020-03-14 21:23:51.709 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[User(userId=null, username=user4, password=3f02ebe3d7929b091e3d8ccfde2f3bc6, name=测试用户4, sex=2, header=null, nickname=测试用户4, userEmail=222222222qq.com, createdTime=null, updateTime=null, version=null, deleted=null)]
+2020-03-14 21:23:51.831 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 126
+2020-03-14 21:23:51.832 INFO  [http-nio-8001-exec-4]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"msg":"添加成功"}
+2020-03-14 21:23:59.358 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /user/getByPage
+2020-03-14 21:23:59.359 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : POST
+2020-03-14 21:23:59.360 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 21:23:59.360 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.UserController.getByPage
+2020-03-14 21:23:59.361 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[Page(currentPage=1, pageSize=2, totalPage=0, totalCount=0, index=0, list=null, params={}, sortColumn=created_time, sortMethod=desc)]
+2020-03-14 21:23:59.512 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 154
+2020-03-14 21:23:59.513 INFO  [http-nio-8001-exec-5]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"data":{"index":0,"list":[{"createdTime":"2020-03-14 21:23:51","name":"测试用户4","nickname":"测试用户4","sex":2,"updateTime":"2020-03-14 21:23:51","userEmail":"222222222qq.com","userId":8,"username":"user4"},{"createdTime":"2020-03-14 21:17:59","name":"测试用户4","nickname":"测试用户4","sex":2,"updateTime":"2020-03-14 21:17:59","userEmail":"222222222qq.com","userId":7,"username":"user4"}],"pageSize":2,"params":{},"sortColumn":"created_time","sortMethod":"desc","totalCount":5,"totalPage":3},"msg":"操作成功！"}
+2020-03-14 21:24:39.375 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /user/get/1
+2020-03-14 21:24:39.377 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : GET
+2020-03-14 21:24:39.378 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 21:24:39.379 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.UserController.get
+2020-03-14 21:24:39.380 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[1]
+2020-03-14 21:24:39.454 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 79
+2020-03-14 21:24:39.455 INFO  [http-nio-8001-exec-7]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"msg":"操作成功！"}
+2020-03-14 21:24:43.881 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /user/get/4
+2020-03-14 21:24:43.882 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : GET
+2020-03-14 21:24:43.882 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 21:24:43.883 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.UserController.get
+2020-03-14 21:24:43.884 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[4]
+2020-03-14 21:24:43.960 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 79
+2020-03-14 21:24:43.961 INFO  [http-nio-8001-exec-6]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"data":{"name":"测试用户4","nickname":"测试用户4","sex":2,"userEmail":"222222222qq.com","userId":4,"username":"测试user4","version":1},"msg":"操作成功！"}
+2020-03-14 21:25:09.861 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /user/delete/4
+2020-03-14 21:25:09.862 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : DELETE
+2020-03-14 21:25:09.863 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 21:25:09.863 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.UserController.delete
+2020-03-14 21:25:09.864 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[4]
+2020-03-14 21:25:10.011 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 150
+2020-03-14 21:25:10.011 INFO  [http-nio-8001-exec-8]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"msg":"删除成功!"}
+2020-03-14 21:25:13.664 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /user/delete/1
+2020-03-14 21:25:13.664 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : DELETE
+2020-03-14 21:25:13.665 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 21:25:13.666 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.UserController.delete
+2020-03-14 21:25:13.666 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[1]
+2020-03-14 21:25:13.774 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 110
+2020-03-14 21:25:13.775 INFO  [http-nio-8001-exec-9]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"msg":"删除成功!"}
+2020-03-14 21:26:49.197 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:116 -请求地址 : /user/update
+2020-03-14 21:26:49.201 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:117 -请求方式 : PUT
+2020-03-14 21:26:49.202 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:120 -IP : 0:0:0:0:0:0:0:1
+2020-03-14 21:26:49.203 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:122 -方法 : xyz.fusheng.blog.controller.UserController.update
+2020-03-14 21:26:49.204 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.printRequestLog:124 -请求参数：[User(userId=4, username=滑稽user4, password=3f02ebe3d7929b091e3d8ccfde2f3bc6, name=测试用户4, sex=2, header=null, nickname=测试用户4, userEmail=222222222qq.com, createdTime=null, updateTime=null, version=1, deleted=null)]
+2020-03-14 21:26:49.328 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.doAround:71 -耗时 : 131
+2020-03-14 21:26:49.330 INFO  [http-nio-8001-exec-2]xyz.fusheng.blog.aspect.RequestAspect.doAfterReturning:85 -返回值:{"code":20000,"msg":"修改成功!"}

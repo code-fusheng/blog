@@ -23,4 +23,147 @@
         header, nickname, user_email, created_time,
         update_time, version, deleted
     </sql>
+    <!-- 添加 -->
+    <insert id="save" parameterType="xyz.fusheng.blog.pojo.User">
+        insert into bl_user(
+            username, password, name, sex, header, nickname, user_email
+        ) values (
+            #{username}, #{password}, #{name}, #{sex},
+            #{header}, #{nickname}, #{userEmail}
+        )
+    </insert>
+    <!-- 更新 -->
+    <update id="update" parameterType="xyz.fusheng.blog.pojo.User">
+        update bl_user set
+        version = version + 1
+        <if test="username!=null and username!=''">
+            ,username = #{username}
+        </if>
+        <if test="password!=null and password!=''">
+            ,password = #{password}
+        </if>
+        <if test="name!=null and name!=''">
+            ,name = #{name}
+        </if>
+        <if test="sex!=null and sex!=''">
+            ,sex = #{sex}
+        </if>
+        <if test="header!=null and header!=''">
+            ,header = #{header}
+        </if>
+        <if test="nickname!=null and nickname!=''">
+            ,nickname = #{nickname}
+        </if>
+        <if test="userEmail!=null and userEmail!=''">
+            ,user_email = #{userEmail}
+        </if>
+        where user_id = #{userId}
+        and version = #{version}
+    </update>
+    <!-- 修改个人信息 -->
+    <update id="updateInfo">
+        update bl_user
+        <set>
+            <if test="username!=null and username!=''">
+                username = #{username},
+            </if>
+            <if test="password!=null and password!=''">
+                password = #{password},
+            </if>
+            <if test="name!=null and name!=''">
+                name = #{name},
+            </if>
+            <if test="sex!=null and sex!=''">
+                sex = #{sex},
+            </if>
+            <if test="header!=null and header!=''">
+                header = #{header},
+            </if>
+            <if test="nickname!=null and nickname!=''">
+                nickname = #{nickname},
+            </if>
+            <if test="userEmail!=null and userEmail!=''">
+                user_email = #{userEmail},
+            </if>
+        </set>
+        where user_id = #{userId}
+    </update>
+    <!-- 根据id查询 -->
+    <select id="getById" resultMap="BaseResultMap">
+        select
+        user_id, username, name, sex, header,
+        nickname, user_email, version
+        from bl_user
+        where user_id = #{id}
+        and deleted = 0
+    </select>
+    <!-- 根据id删除 -->
+    <update id="deleteById">
+        update bl_user set
+        deleted = 1
+        where user_id = #{id}
+    </update>
+    <!-- 分页查询 -->
+    <select id="getByPage" resultMap="BaseResultMap" parameterType="xyz.fusheng.blog.utils.Page">
+        select
+        user_id, username, name, sex, header, nickname, user_email, created_time, update_time
+        from bl_user
+        where
+        deleted = 0
+        <if test="params.username!=null and params.username!=''">
+            and username = #{params.username}
+        </if>
+        <if test="params.name!=null and params.name!=''">
+            and name like CONCAT('%', #{params.name}, '%')
+        </if>
+        <if test="params.sex!=null and params.sex!=''">
+            and sex = #{params.sex}
+        </if>
+        <if test="params.nickname!=null and params.nickname!=''">
+            and nickname like CONCAT('%', #{params.nickname}, '%')
+        </if>
+        <if test="params.userEmail!=null and params.userEmail!=''">
+            and user_email like CONCAT(#{params.userEmail}, '%')
+        </if>
+        <if test="sortColumn!=null and sortColumn!=''">
+            order by ${sortColumn} ${sortMethod}
+        </if>
+        limit #{index}, #{pageSize}
+    </select>
+    <!-- 统计总数 -->
+    <select id="getCountByPage" parameterType="xyz.fusheng.blog.utils.Page" resultType="java.lang.Integer">
+        select
+        count(*)
+        from bl_user
+        where
+        deleted = 0
+        <if test="params.username!=null and params.username!=''">
+            and username = #{params.username}
+        </if>
+        <if test="params.name!=null and params.name!=''">
+            and name like CONCAT('%', #{params.name}, '%')
+        </if>
+        <if test="params.sex!=null and params.sex!=''">
+            and sex = #{params.sex}
+        </if>
+        <if test="params.nickname!=null and params.nickname!=''">
+            and nickname like CONCAT('%', #{params.nickname}, '%')
+        </if>
+        <if test="params.userEmail!=null and params.userEmail!=''">
+            and user_email like CONCAT(#{params.userEmail}, '%')
+        </if>
+    </select>
+    <!-- 根据id列表查询 -->
+    <select id="getByIds" resultMap="BaseResultMap">
+        select
+        user_id, version
+        from bl_user
+        where user_id in
+        <foreach collection="list" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+        and deleted = 0
+    </select>
+
+
 </mapper>

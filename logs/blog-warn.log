@@ -5,3 +5,6 @@
  at [Source: (PushbackInputStream); line: 3, column: 3]]
 2020-03-14 14:36:12.975 WARN  [http-nio-8001-exec-4]o.s.w.s.mvc.support.DefaultHandlerExceptionResolver.logException:199 -Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
  at [Source: (PushbackInputStream); line: 3, column: 3]]
+2020-03-14 17:42:18.665 WARN  [http-nio-8001-exec-4]org.springframework.web.servlet.PageNotFound.noHandlerFound:1251 -No mapping for GET /login.jsp
+2020-03-14 21:23:08.489 WARN  [http-nio-8001-exec-1]org.springframework.web.servlet.PageNotFound.noHandlerFound:1251 -No mapping for PUT /usert/updateInfo
+2020-03-14 21:27:57.837 WARN  [http-nio-8001-exec-5]o.s.w.s.mvc.support.DefaultHandlerExceptionResolver.logException:199 -Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public xyz.fusheng.blog.utils.Result<java.lang.Object> xyz.fusheng.blog.controller.UserController.resetPwd(java.util.List<java.lang.Integer>)]

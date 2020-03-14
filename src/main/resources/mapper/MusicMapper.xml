@@ -19,4 +19,114 @@
         id, name, artist, url, cover,
         lrc, created_time, enabled, deleted
     </sql>
+    <!-- 添加 -->
+    <insert id="save" parameterType="xyz.fusheng.blog.pojo.Music">
+        insert into bl_music(name, artist, url, cover, lrc) values (
+        #{name}, #{artist}, #{url}, #{cover}, #{lrc}
+        )
+    </insert>
+    <!-- 修改 -->
+    <update id="update" parameterType="xyz.fusheng.blog.pojo.Music">
+        update bl_music
+        <set>
+            <if test="name!=null and name!=''">
+                name = #{name},
+            </if>
+            <if test="artist!=null and artist!=''">
+                artist = #{artist},
+            </if>
+            <if test="url!=null and url!=''">
+                url = #{url},
+            </if>
+            <if test="cover!=null and cover!=''">
+                cover = #{cover},
+            </if>
+            <if test="lrc!=null and lrc!=''">
+                lrc = #{lrc},
+            </if>
+            <if test="enabled!=null">
+                enabled = #{enabled},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+    <!-- 根据id查询 -->
+    <select id="getById" resultMap="BaseResultMap">
+        select
+        id,
+        name,
+        artist,
+        url,
+        cover,
+        lrc
+        from bl_music
+        where id = #{id}
+        and deleted = 0
+    </select>
+    <!-- 根据id删除 -->
+    <update id="deleteById">
+        update bl_music set
+        deleted = 1
+        where id = #{id}
+    </update>
+    <!-- 分页查询 -->
+    <select id="getByPage" parameterType="xyz.fusheng.blog.utils.Page" resultMap="BaseResultMap">
+        select
+        id,
+        name,
+        artist,
+        url,
+        cover,
+        created_time,
+        enabled
+        from bl_music
+        where
+        deleted = 0
+        <if test="params.name!=null and params.name!=''">
+            and name like CONCAT('%',#{params.name},'%')
+        </if>
+        <if test="params.artist!=null and params.artist!=''">
+            and artist like CONCAT('%',#{params.artist},'%')
+        </if>
+        <if test="params.enabled!=null and params.enabled!=''">
+            and enabled = #{params.enabled}
+        </if>
+        <if test="sortColumn!=null and sortColumn!=''">
+            order by ${sortColumn} ${sortMethod}
+        </if>
+        limit #{index}, #{pageSize}
+    </select>
+    <!-- 统计总数 -->
+    <select id="getCountByPage" resultType="java.lang.Integer" parameterType="xyz.fusheng.blog.utils.Page">
+        select
+        count(*)
+        from bl_music
+        where
+        deleted = 0
+        <if test="params.name!=null and params.name!=''">
+            and name like CONCAT('%',#{params.name},'%')
+        </if>
+        <if test="params.artist!=null and params.artist!=''">
+            and artist like CONCAT('%',#{params.artist},'%')
+        </if>
+        <if test="params.enabled!=null and params.enabled!=''">
+            and enabled = #{params.enabled}
+        </if>
+    </select>
+    <!-- 前台查询-->
+    <select id="getList" resultMap="BaseResultMap">
+        select
+        id,
+        name,
+        artist,
+        url,
+        cover,
+        lrc
+        from bl_music
+        where
+        deleted = 0
+        and enabled = 1
+    </select>
+
+
 </mapper>

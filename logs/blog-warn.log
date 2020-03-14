@@ -1,2 +1,7 @@
 2020-03-14 10:53:02.271 WARN  [http-nio-8001-exec-8]org.springframework.web.servlet.PageNotFound.noHandlerFound:1251 -No mapping for GET /about/read/1
 2020-03-14 12:03:59.308 WARN  [http-nio-8001-exec-8]o.s.w.s.mvc.support.DefaultHandlerExceptionResolver.logException:199 -Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2020-03-14 12:21:20.572 WARN  [http-nio-8001-exec-6]org.springframework.web.servlet.PageNotFound.noHandlerFound:1251 -No mapping for GET /type/get
+2020-03-14 14:35:44.108 WARN  [http-nio-8001-exec-3]o.s.w.s.mvc.support.DefaultHandlerExceptionResolver.logException:199 -Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+ at [Source: (PushbackInputStream); line: 3, column: 3]]
+2020-03-14 14:36:12.975 WARN  [http-nio-8001-exec-4]o.s.w.s.mvc.support.DefaultHandlerExceptionResolver.logException:199 -Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+ at [Source: (PushbackInputStream); line: 3, column: 3]]

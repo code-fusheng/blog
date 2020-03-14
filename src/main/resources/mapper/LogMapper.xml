@@ -82,8 +82,8 @@
     <!-- 根据id集合删除 -->
     <delete id="deleteByIds">
         delete from bl_log
-        where id in
-        <foreach collection="ids" separator="," item="id" open="(" close=")">
+        where log_id in
+        <foreach collection="list" separator="," item="id" open="(" close=")">
             #{id}
         </foreach>
     </delete>

@@ -1,1 +1,2 @@
 2020-03-14 10:53:02.271 WARN  [http-nio-8001-exec-8]org.springframework.web.servlet.PageNotFound.noHandlerFound:1251 -No mapping for GET /about/read/1
+2020-03-14 12:03:59.308 WARN  [http-nio-8001-exec-8]o.s.w.s.mvc.support.DefaultHandlerExceptionResolver.logException:199 -Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]

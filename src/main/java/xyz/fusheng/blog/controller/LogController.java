@@ -30,7 +30,7 @@ public class LogController {
      * @param page
      * @return
      */
-    @GetMapping("/getByPage")
+    @PostMapping("/getByPage")
     public Result<Page<Log>> getByPage(@RequestBody Page<Log> page){
         String sortColumn = page.getSortColumn();
         if(StringUtils.isNotBlank(sortColumn)){

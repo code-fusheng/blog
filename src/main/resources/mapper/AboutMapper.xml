@@ -19,5 +19,100 @@
         about_id, about_title, about_content, about_read,
         created_time, update_time, version, enable, deleted
     </sql>
+    <!-- 保存 -->
+    <insert id="save" parameterType="xyz.fusheng.blog.pojo.About">
+        insert into bl_about(about_title, about_content) values(
+            #{aboutTitle}, #{aboutContent}
+        )
+    </insert>
+    <!-- 根据id更新 -->
+    <update id="updateById" parameterType="xyz.fusheng.blog.pojo.About">
+        update bl_about set
+        version = version + 1
+        <if test="aboutTitle!=null and aboutTitle!=''">
+            ,about_title = #{aboutTitle}
+        </if>
+        <if test="aboutContent!=null and aboutContent!=''">
+            ,about_content = #{aboutContent}
+        </if>
+        <if test="aboutRead!=null">
+            ,about_read = #{aboutRead}
+        </if>
+        where about_id = #{aboutId}
+        and version = #{version}
+    </update>
+    <!-- 根据id查询 -->
+    <select id="getById" resultMap="BaseResultMap">
+        select
+            about_id,
+            about_title,
+            about_content,
+            about_read,
+            created_time,
+            update_time,
+            version
+        from bl_about
+        where about_id = #{aboutId}
+        and deleted = 0
+    </select>
+    <!-- 查询关于我的 -->
+    <select id="getAbout" resultMap="BaseResultMap">
+        select
+            about_id,
+            about_title,
+            about_content,
+            about_read,
+            created_time,
+            update_time,
+            version
+        from bl_about
+        where enable = 1
+        and deleted = 0
+        limit 1
+    </select>
+    <!-- 根据id删除 -->
+    <update id="deleteById" >
+        update bl_about set
+        deleted = 1
+        where about_id = #{id}
+    </update>
+    <!-- 更新启用状态 -->
+    <update id="updateEnable" parameterType="xyz.fusheng.blog.pojo.About">
+        update bl_about set
+        version = version + 1,
+        enable = #{enable}
+        where about_id = #{aboutId}
+        and version = #{version}
+    </update>
+    <!-- 分页查询 -->
+    <select id="getByPage" parameterType="xyz.fusheng.blog.pojo.About" resultMap="BaseResultMap">
+        select
+        about_id,
+        about_title,
+        about_read,
+        created_time,
+        update_time,
+        enable
+        from bl_about
+        where  deleted = 0
+        <if test="params.aboutTitle!=null and params.aboutTitle!=''">
+            and about_title like CONCAT('%', #{params.aboutTitle}, '%')
+        </if>
+        <if test="sortColumn!=null and sortColumn!=''">
+            order by ${sortColumn} ${sortMethod}
+        </if>
+        limit #{index}, #{pageSize}
+    </select>
+    <!-- 分页是统计总数 -->
+    <select id="getCountByPage" parameterType="xyz.fusheng.blog.pojo.About" resultType="java.lang.Integer">
+        select
+        count(*)
+        from bl_about
+        where  deleted = 0
+        <if test="params.aboutTitle!=null and params.aboutTitle!=''">
+            and about_title like CONCAT('%', #{params.aboutTitle}, '%')
+        </if>
+    </select>
+
 
 </mapper>

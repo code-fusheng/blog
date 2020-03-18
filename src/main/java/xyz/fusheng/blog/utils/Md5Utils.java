@@ -12,6 +12,7 @@ import java.security.NoSuchAlgorithmException;
 
 public class Md5Utils {
     @SuppressWarnings("all")
+    // @SuppressWarnings 作用：告诉编译器忽略指定的警告，不用在编译完成后出现警告信息。
     public static String toMD5(String plainText) {
         byte[] secretBytes = null;
         try {

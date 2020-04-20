@@ -138,6 +138,4 @@
             and type_id = #{params.typeId}
         </if>
     </select>
-
-
 </mapper>

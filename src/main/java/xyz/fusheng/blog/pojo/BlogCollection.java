@@ -27,14 +27,10 @@ public class BlogCollection implements Serializable {
      */
     private String blogId;
 
-    private Blog blog;
-
     /**
      * 用户id
      */
     private Integer userId;
-
-    private User user;
 
     /**
      * 收藏时间

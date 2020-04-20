@@ -109,11 +109,13 @@ public class AboutController {
     @PostMapping("/getByPage")
     public Result<Page<About>> getByPage(@RequestBody Page<About> page) {
         String sortColumn = page.getSortColumn();
+        String newSortColumn = StringUtils.upperCharToUnderLine(sortColumn);
+        page.setSortColumn(newSortColumn);
         if (StringUtils.isNotBlank(sortColumn)) {
             // 排序列不为空
             String[] sortColumns = {"about_read", "created_time", "update_time"};
             List<String> sortList = Arrays.asList(sortColumns);
-            if (!sortList.contains(sortColumn.toLowerCase())) {
+            if (!sortList.contains(newSortColumn.toLowerCase())) {
                 return new Result<>(ResultEnum.PARAMS_ERROR.getCode(), "排序参数不合法！");
             }
         }

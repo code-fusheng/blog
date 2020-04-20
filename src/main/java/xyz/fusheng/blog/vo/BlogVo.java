@@ -2,7 +2,7 @@
  * @FileName: BlogVo
  * @Author: fusheng
  * @Date: 2020/3/13 21:39
- * Description: 博客分类
+ * Description: VO（ View Object）：显示层对象，通常是Web向模板渲染引擎层传输的对象。
  */
 package xyz.fusheng.blog.vo;
 
